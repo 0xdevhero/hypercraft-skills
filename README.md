@@ -71,7 +71,7 @@ flowchart TD
 
 ---
 
-## ⚡ The 10 Core Master Skills (`skills/core/`)
+## ⚡ The 10 Core Master Skills (`skills/`)
 
 Always active by default. Lightweight, universal, and comprehensive:
 
@@ -90,7 +90,7 @@ Always active by default. Lightweight, universal, and comprehensive:
 
 ---
 
-## 📈 Trading & Quant Suite (`skills/ecosystem/trading/`)
+## 📈 Trading & Quant Suite (`ecosystem/trading/`)
 
 A production-grade algorithmic and quantitative trading suite for AI agents:
 
@@ -109,7 +109,7 @@ A production-grade algorithmic and quantitative trading suite for AI agents:
 
 ---
 
-## 🌐 Ecosystem Domains (`skills/ecosystem/`)
+## 🌐 Ecosystem Domains (`ecosystem/`)
 
 HyperCraft categorizes 382 specialized domain skills across 13 engineering disciplines:
 

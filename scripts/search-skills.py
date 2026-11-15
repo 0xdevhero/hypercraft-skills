@@ -12,6 +12,7 @@ from typing import List, Dict, Any
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 SKILLS_DIR = os.path.join(REPO_ROOT, "skills")
+ECOSYSTEM_DIR = os.path.join(REPO_ROOT, "ecosystem")
 
 def parse_skill_file(filepath: str) -> Dict[str, Any]:
     try:
@@ -24,12 +25,16 @@ def parse_skill_file(filepath: str) -> Dict[str, Any]:
     description = ""
     category = "general"
 
-    rel_path = os.path.relpath(filepath, SKILLS_DIR)
-    parts = rel_path.split(os.sep)
-    if len(parts) >= 3 and parts[0] == "ecosystem":
-        category = parts[1]
-    elif len(parts) >= 2 and parts[0] == "core":
+    if filepath.startswith(ECOSYSTEM_DIR):
+        rel_path = os.path.relpath(filepath, ECOSYSTEM_DIR)
+        parts = rel_path.split(os.sep)
+        if len(parts) >= 2:
+            category = parts[0]
+    elif filepath.startswith(SKILLS_DIR):
+        rel_path = os.path.relpath(filepath, SKILLS_DIR)
         category = "core"
+    else:
+        rel_path = os.path.basename(filepath)
 
     if content.startswith("---"):
         sections = content.split("---", 2)
@@ -56,7 +61,7 @@ def score_skill(skill: Dict[str, Any], query_terms: List[str]) -> float:
     name_lower = skill["name"].lower()
     desc_lower = skill["description"].lower()
     cat_lower = skill["category"].lower()
-    content_lower = skill["content"][:2000].lower()
+    content_lower = skill["content"][:2500].lower()
 
     for term in query_terms:
         term_clean = term.lower().strip()
@@ -73,7 +78,6 @@ def score_skill(skill: Dict[str, Any], query_terms: List[str]) -> float:
         matches_in_body = len(re.findall(re.escape(term_clean), content_lower))
         score += min(matches_in_body * 3.0, 30.0)
 
-    # Core master skills get a small boost for general queries
     if skill["category"] == "core":
         score += 5.0
 
@@ -81,7 +85,6 @@ def score_skill(skill: Dict[str, Any], query_terms: List[str]) -> float:
 
 def extract_excerpt(content: str, query_terms: List[str], max_lines: int = 12) -> str:
     lines = content.splitlines()
-    # Skip frontmatter
     start_idx = 0
     if len(lines) > 0 and lines[0].strip() == "---":
         for idx in range(1, len(lines)):
@@ -90,7 +93,6 @@ def extract_excerpt(content: str, query_terms: List[str], max_lines: int = 12) -
                 break
 
     body_lines = lines[start_idx:]
-    # Find line with highest term match
     best_idx = 0
     best_count = -1
     for i, line in enumerate(body_lines):
@@ -109,16 +111,20 @@ def search_skills(query: str, category_filter: str = None, top_k: int = 3):
         return
 
     skills = []
-    for root, _, files in os.walk(SKILLS_DIR):
-        if "SKILL.md" in files:
-            path = os.path.join(root, "SKILL.md")
-            skill_info = parse_skill_file(path)
-            if skill_info:
-                if category_filter and skill_info["category"].lower() != category_filter.lower():
-                    continue
-                score = score_skill(skill_info, query_terms)
-                if score > 0:
-                    skills.append((score, skill_info))
+    search_dirs = [SKILLS_DIR, ECOSYSTEM_DIR]
+    for sdir in search_dirs:
+        if not os.path.exists(sdir):
+            continue
+        for root, _, files in os.walk(sdir):
+            if "SKILL.md" in files:
+                path = os.path.join(root, "SKILL.md")
+                skill_info = parse_skill_file(path)
+                if skill_info:
+                    if category_filter and skill_info["category"].lower() != category_filter.lower():
+                        continue
+                    score = score_skill(skill_info, query_terms)
+                    if score > 0:
+                        skills.append((score, skill_info))
 
     skills.sort(key=lambda x: x[0], reverse=True)
     results = skills[:top_k]
@@ -135,7 +141,7 @@ def search_skills(query: str, category_filter: str = None, top_k: int = 3):
     for rank, (score, skill) in enumerate(results, 1):
         print(f"\n### [{rank}] {skill['name']}  (Score: {score:.1f} | Category: {skill['category']})")
         print(f"📖 Description: {skill['description']}")
-        print(f"📍 Location: skills/{skill['rel_path']}")
+        print(f"📍 Location: {os.path.relpath(skill['path'], REPO_ROOT)}")
         print("\n--- Relevant Excerpt ---")
         excerpt = extract_excerpt(skill["content"], query_terms)
         print(excerpt)

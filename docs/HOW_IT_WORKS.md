@@ -97,7 +97,7 @@ The 10 Core Master Skills form a deterministic, end-to-end software development 
 
 ## 📈 3. How the Trading & Quant Suite Works
 
-Located in `skills/ecosystem/trading/`, this pack provides mathematical formulas, execution connectors, and risk-management guardrails for algorithmic trading.
+Located in `ecosystem/trading/`, this pack provides mathematical formulas, execution connectors, and risk-management guardrails for algorithmic trading.
 
 ### 1. Mathematical Indicators & SMC (`trading-quant-indicators`)
 - **Formula Implementation:** Vectorized calculations for RSI, MACD, Bollinger Bands, ATR, Supertrend, and Volume-Weighted Average Price (VWAP).
@@ -138,7 +138,7 @@ When an agent runs:
 python scripts/search-skills.py "query keywords"
 ```
 The search script:
-1. Crawls all `SKILL.md` files under `skills/core/` and `skills/ecosystem/`.
+1. Crawls all `SKILL.md` files under `skills/` and `ecosystem/`.
 2. Evaluates relevance using weighted scoring:
    - **Exact name match:** 100 points
    - **Partial name match:** 40 points
@@ -164,7 +164,7 @@ python scripts/search-skills.py "celery async tasks" --category frameworks
 
 ## ✍️ 5. How the Humanizer Engine & Auditor Works (`scripts/audit-humanizer.py`)
 
-The Humanizer engine (`skills/ecosystem/tools-workflow/humanizer/SKILL.md`) removes robotic, generic AI writing patterns and ensures all prose reads naturally.
+The Humanizer engine (`ecosystem/tools-workflow/humanizer/SKILL.md`) removes robotic, generic AI writing patterns and ensures all prose reads naturally.
 
 ### The 6 Detection Criteria
 1. **Stock AI Words:** Detects overused buzzwords (such as conversational filler, overused hype adjectives, and dramatic marketing superlatives).
@@ -194,8 +194,8 @@ The script outputs a score out of 100, specific line numbers, and actionable rem
 | Need | What to Use | Execution Command |
 |---|---|---|
 | **Build a new feature end-to-end** | Core 10 SDLC Loop | Follow `hyper-plan` through `hyper-ship` |
-| **Create architectural diagrams** | `hyper-diagram` | Reference `skills/core/hyper-diagram/SKILL.md` |
+| **Create architectural diagrams** | `hyper-diagram` | Reference `skills/hyper-diagram/SKILL.md` |
 | **Search 400+ domain skills** | Search CLI | `python scripts/search-skills.py "<topic>"` |
-| **Develop algorithmic trading bots** | Trading & Quant Suite | Reference `skills/ecosystem/trading/` |
+| **Develop algorithmic trading bots** | Trading & Quant Suite | Reference `ecosystem/trading/` |
 | **Verify natural human prose** | Humanizer Auditor | `python scripts/audit-humanizer.py <file>` |
 | **Validate all repository skills** | CI Verification | `python scripts/search-skills.py --help` & test runner |
