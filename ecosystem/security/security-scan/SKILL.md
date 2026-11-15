@@ -11,7 +11,7 @@ metadata:
 
 # Security Scan Skill
 
-Audit your Claude Code configuration for security issues using [AgentShield](https://github.com/Hero-Coco/hypercraft-skills).
+Audit your Claude Code configuration for security issues using [AgentShield](https://github.com/0xdevhero/hypercraft-skills).
 
 ## When to Activate
 
@@ -166,5 +166,5 @@ Add to your CI pipeline:
 
 ## Links
 
-- **GitHub**: [github.com/HyperCraft/agentshield](https://github.com/Hero-Coco/hypercraft-skills)
+- **GitHub**: [github.com/HyperCraft/agentshield](https://github.com/0xdevhero/hypercraft-skills)
 - **npm**: [npmjs.com/package/ecc-agentshield](https://www.npmjs.com/package/ecc-agentshield)

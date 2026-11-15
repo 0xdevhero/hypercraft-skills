@@ -3,7 +3,7 @@
 > **The unified, batteries-included engineering distribution for AI coding agents.**  
 > Combines architectural planning, editorial visuals, design intelligence, anti-slop UI craft, strict TDD, algorithmic quant trading, and production API hardening under one cohesive standard.
 
-[![CI](https://github.com/Hero-Coco/hypercraft-skills/actions/workflows/verify.yml/badge.svg)](https://github.com/Hero-Coco/hypercraft-skills/actions)
+[![CI](https://github.com/0xdevhero/hypercraft-skills/actions/workflows/verify.yml/badge.svg)](https://github.com/0xdevhero/hypercraft-skills/actions)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Skills: 392 Enterprise](https://img.shields.io/badge/Skills-392_Enterprise_Packs-brightgreen.svg)](#-ecosystem-domains-skillsecosystem)
 [![Token Savings: 98%](https://img.shields.io/badge/Token_Savings-98%25_Less_Context-blue.svg)](#-why-hypercraft-the-token-crisis-solved)
@@ -184,19 +184,19 @@ python scripts/scrub-watermarks.py path/to/repo --brand "HyperCraft Core Team"
 ### 1. Google Antigravity
 Clone directly into your configuration directory:
 ```bash
-git clone https://github.com/Hero-Coco/hypercraft-skills.git ~/.gemini/config/plugins/hypercraft-skills
+git clone https://github.com/0xdevhero/hypercraft-skills.git ~/.gemini/config/plugins/hypercraft-skills
 ```
 
 ### 2. Claude Code
 Install as a workspace plugin:
 ```bash
-claude plugin add https://github.com/Hero-Coco/hypercraft-skills
+claude plugin add https://github.com/0xdevhero/hypercraft-skills
 ```
 
 ### 3. Cursor & Windsurf
 Add to your project root or workspace rules:
 ```bash
-git submodule add https://github.com/Hero-Coco/hypercraft-skills.git .agents/hypercraft
+git submodule add https://github.com/0xdevhero/hypercraft-skills.git .agents/hypercraft
 ```
 
 ---
@@ -213,4 +213,4 @@ We welcome community improvements, new language packs, and quant trading strateg
 ## 📄 License
 
 Distributed under the **Apache 2.0 License**. See [LICENSE](LICENSE) for details.  
-Maintained by the **HyperCraft Core Team** ([Hero-Coco](https://github.com/Hero-Coco)).
+Maintained by the **HyperCraft Core Team** ([0xdevhero](https://github.com/0xdevhero)).

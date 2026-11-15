@@ -18,7 +18,7 @@ Use this skill when you need to dispatch multiple Claude Code agents to work on 
 ## Setup
 
 The DevFleet server is a separate project, not bundled with HyperCraft. Install and
-run it from its repository first: <https://github.com/Hero-Coco/hypercraft-skills
+run it from its repository first: <https://github.com/0xdevhero/hypercraft-skills
 
 Then connect the running instance via MCP:
 ```bash

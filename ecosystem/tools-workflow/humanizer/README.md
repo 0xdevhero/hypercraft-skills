@@ -2,7 +2,7 @@
 
 sponsored by [cfo.ai](https://cfo.ai)
 
-[![GitHub stars](https://img.shields.io/github/stars/hypercraft-skills?style=flat)](https://github.com/Hero-Coco/hypercraft-skills) [![skills.sh installs](https://skills.sh/b/hypercraft-skills)](https://skills.sh/hypercraft-skills) 
+[![GitHub stars](https://img.shields.io/github/stars/hypercraft-skills?style=flat)](https://github.com/0xdevhero/hypercraft-skills) [![skills.sh installs](https://skills.sh/b/hypercraft-skills)](https://skills.sh/hypercraft-skills) 
 
 
 Humanizer makes AI-written text sound like a person wrote it, without changing what it says. It is built on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), the guide Wikipedia editors use to catch AI-generated text, and it works in Claude Code, Codex, and any other agent that supports skills.
@@ -13,7 +13,7 @@ Humanizer makes AI-written text sound like a person wrote it, without changing w
 **After:**
 > Shared drafts are out today. For months our own team passed around files named final_v7.docx, and we got sick of it. Now two people can edit the same doc at once and see each other's changes as they type. Comments stay attached to the sentence they're about, even when the text around it changes. It's free on every plan.
 
-In a blind test, judges preferred Humanizer's rewrite over the original AI text 16 times out of 16 ([#229](https://github.com/Hero-Coco/hypercraft-skills)).
+In a blind test, judges preferred Humanizer's rewrite over the original AI text 16 times out of 16 ([#229](https://github.com/0xdevhero/hypercraft-skills)).
 
 Humanizer edits for human readers. It does not try to get past AI detectors, and detectors still flag most of its output.
 

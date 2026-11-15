@@ -122,5 +122,5 @@ This skill uses heuristic estimation — no real tokenizer. Accuracy ~85-90%, va
 
 ## Source
 
-Standalone skill from [TBA — Token Budget Advisor for Claude Code](https://github.com/Hero-Coco/hypercraft-skills).
+Standalone skill from [TBA — Token Budget Advisor for Claude Code](https://github.com/0xdevhero/hypercraft-skills).
 Original project also ships a Python estimator script, but this repository keeps the skill self-contained and heuristic-only.

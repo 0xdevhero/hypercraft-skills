@@ -10,7 +10,7 @@ metadata:
 
 # HyperCraft Conventions
 
-> Generated from [HyperCraft/HyperCraft](https://github.com/Hero-Coco/hypercraft-skills) on 2026-03-20
+> Generated from [HyperCraft/HyperCraft](https://github.com/0xdevhero/hypercraft-skills) on 2026-03-20
 
 ## Overview
 

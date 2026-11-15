@@ -189,7 +189,7 @@ required by the checked-in runbook, and verify the native Claude marketplace
 path remains installable:
 
 ```text
-/plugin marketplace add https://github.com/Hero-Coco/hypercraft-skills
+/plugin marketplace add https://github.com/0xdevhero/hypercraft-skills
 /plugin install ecc@ecc
 ```
 
