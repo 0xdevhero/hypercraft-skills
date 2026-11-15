@@ -35,11 +35,11 @@ jobs:
                   sys.exit(1)
           "
 
-      - name: Validate SKILL.md Frontmatter & Structure
+      - name: Validate SKILL.md Frontmatter & Structure (400+ Skills)
         run: |
           python -c "
           import glob, sys, re
-          skills = glob.glob('skills/*/SKILL.md')
+          skills = glob.glob('skills/**/SKILL.md', recursive=True)
           if not skills:
               print('❌ No SKILL.md files discovered!')
               sys.exit(1)
@@ -58,11 +58,16 @@ jobs:
               if 'name:' not in fm or 'description:' not in fm:
                   print(f'❌ Missing name or description in frontmatter: {path}')
                   sys.exit(1)
-              print(f'✅ Passed: {path}')
-          print('All skills validated successfully!')
+          print(f'✅ All {len(skills)} skills validated successfully!')
           "
 
       - name: Test UI Intelligence Script Execution
         run: |
           python skills/hyper-ui-intelligence/scripts/search.py "fintech dashboard" --domain color
           python skills/hyper-ui-intelligence/scripts/search.py "glassmorphism" --domain style
+
+      - name: Test Skill Intelligence Search Engine
+        run: |
+          python scripts/search-skills.py "quant indicators"
+          python scripts/search-skills.py "flutter routing"
+          python scripts/search-skills.py "django celery"
