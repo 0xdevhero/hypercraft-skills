@@ -1,0 +1,68 @@
+name: Skill Verification & Quality CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate:
+    name: Lint & Validate Skills
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate JSON Schemas
+        run: |
+          python -c "
+          import json, glob, sys
+          json_files = ['plugin.json', 'package.json', 'mcp_config.json', '.agents/plugins/marketplace.json']
+          for f in json_files:
+              try:
+                  with open(f, 'r', encoding='utf-8') as fp:
+                      json.load(fp)
+                  print(f'✅ Valid JSON: {f}')
+              except Exception as e:
+                  print(f'❌ Invalid JSON {f}: {e}')
+                  sys.exit(1)
+          "
+
+      - name: Validate SKILL.md Frontmatter & Structure
+        run: |
+          python -c "
+          import glob, sys, re
+          skills = glob.glob('skills/*/SKILL.md')
+          if not skills:
+              print('❌ No SKILL.md files discovered!')
+              sys.exit(1)
+          print(f'Discovered {len(skills)} skills. Checking format...')
+          for path in skills:
+              with open(path, 'r', encoding='utf-8') as fp:
+                  content = fp.read()
+              if not content.startswith('---'):
+                  print(f'❌ Missing frontmatter delimiter in {path}')
+                  sys.exit(1)
+              parts = content.split('---', 2)
+              if len(parts) < 3:
+                  print(f'❌ Malformed frontmatter in {path}')
+                  sys.exit(1)
+              fm = parts[1]
+              if 'name:' not in fm or 'description:' not in fm:
+                  print(f'❌ Missing name or description in frontmatter: {path}')
+                  sys.exit(1)
+              print(f'✅ Passed: {path}')
+          print('All skills validated successfully!')
+          "
+
+      - name: Test UI Intelligence Script Execution
+        run: |
+          python skills/hyper-ui-intelligence/scripts/search.py "fintech dashboard" --domain color
+          python skills/hyper-ui-intelligence/scripts/search.py "glassmorphism" --domain style

@@ -1,4 +1,4 @@
-﻿---
+---
 name: hyper-security-auditor
 description: Staff AppSec & Cloud Security Engineer enforcing OWASP API Top 10 defenses, BOLA/IDOR isolation, rate limiting, and zero-trust credential hygiene.
 tools:

@@ -1,4 +1,4 @@
-﻿---
+---
 name: hyper-security
 description: Hardens backend APIs and web applications against the OWASP API Security Top 10. Enforces Broken Object Level Authorization (BOLA/IDOR) isolation, sliding-window/token-bucket rate limiting, JWT token hardening, and strict CORS locking. Use when building or auditing API endpoints, authentication flows, or web server configurations.
 version: 1.0.0

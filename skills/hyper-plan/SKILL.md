@@ -1,4 +1,4 @@
-﻿---
+---
 name: hyper-plan
 description: Defines structured engineering specifications, capability maps, and atomic task Directed Acyclic Graphs (DAGs) before writing code. Enforces context boundary isolation and stops agents from guessing on ambiguous requirements. Use when starting a new project, feature, refactor, or complex task.
 version: 1.0.0

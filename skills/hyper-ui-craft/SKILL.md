@@ -1,4 +1,4 @@
-﻿---
+---
 name: hyper-ui-craft
 description: Enforces human-grade frontend craftsmanship and bans generic AI-generated aesthetic slop. Governs visual hierarchy, theme systems, shadcn/ui components, Tailwind utilities, and strict accessibility. Use when building landing pages, web dashboards, UI components, or refactoring existing interfaces to look professional and authentic.
 version: 1.0.0

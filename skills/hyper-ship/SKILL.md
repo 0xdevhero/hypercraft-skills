@@ -1,4 +1,4 @@
-﻿---
+---
 name: hyper-ship
 description: Enforces pre-launch release quality gates, Conventional Commits formatting, secret leak detection, and deployment readiness checklists. Use before committing code, creating pull requests, or deploying to production.
 version: 1.0.0

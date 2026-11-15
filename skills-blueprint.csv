@@ -1,4 +1,4 @@
-﻿Column1,Column2,Column3,Column4,Column5,Column6
+Column1,Column2,Column3,Column4,Column5,Column6
 Skill_ID,Display_Name,SDLC_Phase,Merged_From,Core_Superpower,Creator_Advantage
 hyper-plan,HyperPlan - Spec & Task Architecture,1. Architect & Plan,"spec-driven-development, planning-and-task-breakdown, context-engineering",Gated spec before code with capability mapping and atomic task DAG,Prevents agent from jumping to broken code; cleanly scopes complex trading bot logic & web features
 hyper-diagram,HyperDiagram - Editorial Technical Visuals,1. Architect & Plan,diagram-design (Cathryn Lavery),Stripe/Linear publication-grade technical and architecture diagrams in SVG/HTML,Instantly visualizes SMC trading logic (Order Block flow & Trailing Stop) & web microservices

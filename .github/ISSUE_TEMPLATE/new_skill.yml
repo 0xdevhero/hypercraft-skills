@@ -1,0 +1,25 @@
+name: 🚀 New Skill Proposal
+description: Propose a brand-new master skill for HyperCraft
+labels: ["new-skill"]
+body:
+  - type: input
+    id: skill-name
+    attributes:
+      label: Proposed Skill ID
+      placeholder: "e.g. hyper-database-tuning"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What gap does this fill?
+      description: What practitioner workflow does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: key-checks
+    attributes:
+      label: Key Verification Gates
+      description: What non-negotiable rules or checklists should this skill enforce?
+    validations:
+      required: true

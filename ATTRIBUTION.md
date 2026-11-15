@@ -1,4 +1,4 @@
-﻿# Open Source Acknowledgements & Attribution
+# Open Source Acknowledgements & Attribution
 
 HyperCraft is an integrated, unified distribution of autonomous engineering capabilities, designed to establish an elite engineering standard for AI coding agents.
 

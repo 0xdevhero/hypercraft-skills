@@ -1,4 +1,4 @@
-﻿---
+---
 name: hyper-designer
 description: Senior UI/UX Design Engineer dedicated to anti-slop visual craft, design tokens, responsive layouts, and accessible frontend interfaces.
 tools:

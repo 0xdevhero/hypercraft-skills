@@ -1,4 +1,4 @@
-﻿---
+---
 name: hyper-tdd
 description: Enforces strict Test-Driven Development (TDD) using the Red-Green-Refactor cycle. Mandates writing failing automated tests as mathematical proof of requirements before implementing production code. Covers Python, TypeScript, Go, Rust, and Java. Use when creating new features, fixing bugs, or refactoring logic.
 version: 1.0.0

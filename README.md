@@ -3,6 +3,7 @@
 > **The unified, batteries-included engineering distribution for AI coding agents.**  
 > Combines architectural planning, editorial visuals, design intelligence, anti-slop UI craft, strict TDD, and production API hardening under one cohesive standard.
 
+[![CI](https://github.com/Hero-Coco/hypercraft-skills/actions/workflows/verify.yml/badge.svg)](https://github.com/Hero-Coco/hypercraft-skills/actions)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Skills: 10 Unified](https://img.shields.io/badge/Skills-10_Master_Packs-brightgreen.svg)](#the-10-master-skills)
 [![Agents: 4 Personas](https://img.shields.io/badge/Agents-4_Specialists-orange.svg)](#specialized-agents)

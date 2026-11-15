@@ -1,0 +1,42 @@
+name: 🐛 Bug Report
+description: Report an issue, incorrect instruction, or script failure in HyperCraft
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve HyperCraft! Please provide as much detail as possible.
+  - type: dropdown
+    id: client
+    attributes:
+      label: AI Client / Environment
+      options:
+        - Antigravity
+        - Claude Code
+        - Cursor
+        - OpenAI Codex CLI
+        - GitHub Copilot
+        - Gemini CLI
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: skill
+    attributes:
+      label: Affected Skill
+      placeholder: "e.g. hyper-ui-craft, hyper-security"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the unexpected behavior or error.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened instead?
+    validations:
+      required: true

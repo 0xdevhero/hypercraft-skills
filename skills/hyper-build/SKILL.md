@@ -1,4 +1,4 @@
-﻿---
+---
 name: hyper-build
 description: Enforces atomic, incremental implementation one verified vertical slice at a time. Prevents catastrophic multi-file diffs and broken intermediate states. Use during code generation, feature construction, or large refactorings.
 version: 1.0.0

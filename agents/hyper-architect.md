@@ -1,4 +1,4 @@
-﻿---
+---
 name: hyper-architect
 description: Principal Systems Architect for system decomposition, specification authoring, database modeling, and technical architecture visuals.
 tools:

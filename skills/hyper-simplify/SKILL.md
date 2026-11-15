@@ -1,4 +1,4 @@
-﻿---
+---
 name: hyper-simplify
 description: Simplifies working code for clarity, readability, and maintainability without altering runtime behavior. Ruthlessly removes dead code, deeply nested conditionals, premature abstractions, and bloated wrappers. Use after getting tests green, during code review, or when cleaning up complex legacy files.
 version: 1.0.0

@@ -1,4 +1,4 @@
-﻿---
+---
 name: hyper-reviewer
 description: Lead SDET & Code Quality Reviewer enforcing strict Test-Driven Development (TDD), behavior-preserving simplification, and adversarial verification.
 tools:
