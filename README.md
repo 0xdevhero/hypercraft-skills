@@ -1,4 +1,4 @@
-﻿# ⚡ HyperCraft: Autonomous Engineering Suite for AI Agents
+# ⚡ HyperCraft: Autonomous Engineering Suite for AI Agents
 
 > **The unified, batteries-included engineering distribution for AI coding agents.**  
 > Combines architectural planning, editorial visuals, design intelligence, anti-slop UI craft, strict TDD, and production API hardening under one cohesive standard.
