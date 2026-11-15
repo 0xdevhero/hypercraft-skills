@@ -35,7 +35,7 @@ jobs:
                   sys.exit(1)
           "
 
-      - name: Validate SKILL.md Frontmatter & Structure (390+ Skills)
+      - name: Validate SKILL.md Frontmatter & Structure (500+ Skills)
         run: |
           python -c "
           import glob, sys, re

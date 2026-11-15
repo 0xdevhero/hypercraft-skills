@@ -5,29 +5,29 @@
 
 [![CI](https://github.com/0xdevhero/hypercraft-skills/actions/workflows/verify.yml/badge.svg)](https://github.com/0xdevhero/hypercraft-skills/actions)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-[![Skills: 392 Enterprise](https://img.shields.io/badge/Skills-392_Enterprise_Packs-brightgreen.svg)](#-ecosystem-domains-skillsecosystem)
+[![Skills: 511 Enterprise](https://img.shields.io/badge/Skills-511_Enterprise_Packs-brightgreen.svg)](#-ecosystem-domains-skillsecosystem)
 [![Token Savings: 98%](https://img.shields.io/badge/Token_Savings-98%25_Less_Context-blue.svg)](#-why-hypercraft-the-token-crisis-solved)
 [![Trading: Quant & SMC](https://img.shields.io/badge/Trading-Quant_%26_SMC_Suite-gold.svg)](#-trading--quant-suite-skillsecosystemtrading)
-[![Agents: 4 Specialists](https://img.shields.io/badge/Agents-4_Specialist_Personas-orange.svg)](#-specialized-personas-agents)
+[![Agents: 76 Specialists](https://img.shields.io/badge/Agents-76_Specialist_Personas-orange.svg)](#-specialized-agent-roster-agents)
 [![Platforms](https://img.shields.io/badge/Platforms-Antigravity%20%7C%20Claude%20Code%20%7C%20Cursor%20%7C%20Codex-blueviolet.svg)](#-installation--quickstart)
 
 ---
 
 ## 💥 Why HyperCraft? The Token Crisis Solved
 
-When developers dump hundreds of individual skill files into AI agent harnesses (Claude Code, Antigravity, Cursor), they face three immediate problems:
+When developers dump hundreds of individual skill files into AI coding agent environments (Claude Code, Antigravity, Cursor), they face three immediate problems:
 
 1. **The 25,000-Token Tax:** Injecting 400 loose skill definitions burns **20,000 to 25,000 tokens** on every turn before you even submit your prompt.
-2. **Silently Dropped Skills:** LLM harnesses hit strict context budget limits and silently drop over half of your installed skills without warning.
+2. **Silently Dropped Skills:** Coding agent runners hit strict context budget limits and silently drop over half of your installed skills without warning.
 3. **Attention Dilution:** When an LLM evaluates 400 competing descriptions simultaneously, decision quality degrades, leading to hallucinated arguments and incorrect tools.
 
-**HyperCraft solves this by restructuring 392 skills into a two-tier hybrid architecture:**
+**HyperCraft solves this by restructuring 511 skills into a two-tier hybrid architecture:**
 
-| Evaluation Metric | Traditional Flat Setup (400 Skills) | HyperCraft Hybrid Architecture | Developer Benefit |
+| Evaluation Metric | Traditional Flat Setup (500+ Skills) | HyperCraft Hybrid Architecture | Developer Benefit |
 |---|:---:|:---:|---|
-| **System Prompt Overhead** | 20,000 to 25,000 tokens | **< 500 tokens** | **98% Token Reduction** 🚀 |
-| **Skill Availability** | > 50% dropped by context budget | **100% accessible on disk** | Zero dropped skills |
-| **Agent Decision Quality** | Confused by 400 options | **Laser-focused on 10 Core Packs** | Deterministic, bug-free execution |
+| **System Prompt Overhead** | 25,000 to 30,000 tokens | **< 500 tokens** | **98% Token Reduction** 🚀 |
+| **Skill Availability** | > 60% dropped by context budget | **100% accessible on disk** | Zero dropped skills |
+| **Agent Decision Quality** | Confused by 500+ options | **Laser-focused on 10 Core Packs** | Deterministic, bug-free execution |
 | **Deep-Domain Access** | Bloats system memory | **Queried on demand via CLI in 50ms** | Zero-token prompt bloat |
 | **Attribution & Hygiene** | Fragmented author watermarks | **100% clean Apache-2.0 standard** | Enterprise-safe distribution |
 
@@ -111,21 +111,22 @@ A production-grade algorithmic and quantitative trading suite for AI agents:
 
 ## 🌐 Ecosystem Domains (`ecosystem/`)
 
-HyperCraft categorizes 382 specialized domain skills across 13 engineering disciplines:
+HyperCraft categorizes 501 specialized domain skills across 14 engineering disciplines:
 
 - **`trading/`**: 10 Quant, algorithmic trading, exchange execution, and bot security skills.
-- **`languages/`**: 26 skills covering Python, Go, Rust, Dart/Flutter, Swift, Kotlin, C++, C#, and Modern Perl.
-- **`frameworks/`**: 33 skills for React 19, Next.js App Router, Vue 3, Nuxt 4, Laravel, Django, Spring Boot, NestJS, and Ktor.
-- **`databases/`**: 8 skills covering PostgreSQL, MySQL, Redis, ClickHouse, BigQuery, and JPA/Hibernate.
-- **`devops-cloud/`**: 22 skills for Docker, Kubernetes, CI/CD pipelines, Uncloud, Cisco IOS, and Homelab.
+- **`languages/`**: 41 skills covering Python, Go, Rust, Dart, Flutter, Swift, Kotlin, C++, C#, and Modern Perl.
+- **`frameworks/`**: 56 skills for React 19, Next.js, Vue 3, Nuxt 4, Flutter UI, Firebase Suite, Laravel, Django, Spring Boot, NestJS, and Ktor.
+- **`databases/`**: 9 skills covering PostgreSQL, MySQL, Redis, ClickHouse, Cloud Databases, BigQuery, and JPA/Hibernate.
+- **`devops-cloud/`**: 25 skills for Docker, Kubernetes, CI/CD pipelines, GCP Observability, Uncloud, Cisco IOS, and Homelab.
 - **`security/`**: 10 skills covering Deep Auth, BOLA, JWT, CORS, Rate-Limiting, and HIPAA compliance.
 - **`multimedia-3d/`**: 12 skills for Three.js WebGL, GSAP, Framer Motion, Spline 3D, Remotion, and Manim.
-- **`agentic-ai/`**: 29 skills for Autonomous loops, DevFleet, DMUX multi-agent worktrees, and agent harnesses.
-- **`science-bio/`**: 5 skills for PubChem, ChEMBL, AlphaFold, ClinVar, GTEx, and NCBI sequence pipelines.
+- **`agentic-ai/`**: 45 skills for Autonomous loops, DevFleet, DMUX multi-agent worktrees, Antigravity SDK, and autonomous runtime systems.
+- **`science-bio/`**: 53 skills for PubChem, ChEMBL, AlphaFold, Biomolecular Viewer, ClinVar, GTEx, and NCBI pipelines.
 - **`testing-qa/`**: 21 skills for Playwright E2E, Windows native desktop UI automation, and CodeScene Health.
-- **`architecture-sdlc/`**: 34 skills for Clean Architecture, Hexagonal patterns, API contracts, and ADRs.
-- **`frontend-ui/`**: 17 skills for Accessible components, Tailwindcss-motion, and React Bits dynamic canvases.
-- **`tools-workflow/`**: 154 skills for Git workflows, Jira integration, Conventional Commits, and token tracking.
+- **`architecture-sdlc/`**: 33 skills for Clean Architecture, Hexagonal patterns, API contracts, and ADRs.
+- **`frontend-ui/`**: 18 skills for Hallmark anti-AI design, Accessible components, Tailwindcss-motion, and React Bits dynamic canvases.
+- **`tools-workflow/`**: 167 skills for Chrome DevTools, Google Workspace, Git workflows, Jira integration, Conventional Commits, and token tracking.
+- **`backend-api/`**: 1 core pattern skill for production API design.
 
 ---
 
@@ -168,14 +169,24 @@ python scripts/scrub-watermarks.py path/to/repo --brand "HyperCraft Core Team"
 
 ---
 
-## 🤖 Specialized Personas (`agents/`)
+## 🤖 Specialized Agent Roster (`agents/`)
 
+HyperCraft ships with **76 autonomous, specialized agent personas** across architecture, multi-language code review, build resolution, and application security:
+
+### 👑 Core Master Personas
 | Persona | Role | Focus |
 |---|---|---|
 | **`hyper-architect`** | Principal Systems Architect | System decomposition, capability maps, contracts, and RFC plans. |
 | **`hyper-designer`** | Staff Product Designer | Modern editorial aesthetics, color harmony, typography pairings, and zero-slop UI. |
 | **`hyper-security-auditor`** | Lead AppSec Engineer | OWASP Top 10, financial prompt injection, threat modeling, and cryptographic integrity. |
 | **`hyper-reviewer`** | Principal Code Reviewer | Cyclomatic reduction, memory leak detection, immutability, and zero regression. |
+
+### 🛠️ Specialized Full-Stack Roster (72 Agents)
+- **Language Reviewers (11)**: `typescript-reviewer`, `python-reviewer`, `go-reviewer`, `rust-reviewer`, `swift-reviewer`, `kotlin-reviewer`, `cpp-reviewer`, `csharp-reviewer`, `php-reviewer`, `ruby-reviewer`, `bengali-reviewer`.
+- **Framework & Database Reviewers (8)**: `react-reviewer`, `vue-reviewer`, `django-reviewer`, `fastapi-reviewer`, `flutter-reviewer`, `database-reviewer`, `mle-reviewer`, `healthcare-reviewer`.
+- **Compiler & Build Error Resolvers (11)**: `build-error-resolver`, `react-build-resolver`, `go-build-resolver`, `rust-build-resolver`, `swift-build-resolver`, `kotlin-build-resolver`, `dart-build-resolver`, `cpp-build-resolver`, `django-build-resolver`, `java-build-resolver`, `pytorch-build-resolver`.
+- **Quality, TDD & Security (14)**: `tdd-guide`, `security-reviewer`, `silent-failure-hunter`, `performance-optimizer`, `pr-test-analyzer`, `commit-reviewer`, `e2e-runner`, `refactor-cleaner`, `spec-miner`, `chief-of-staff`, `planner`, `code-explorer`, `code-simplifier`, `doc-updater`.
+- **Domain Specialists (28)**: `firestore-rules-author`, `flutter_a11y_agent`, `network-architect`, `network-config-reviewer`, `network-troubleshooter`, `homelab-architect`, `seo-specialist`, `marketing-agent`, `rag-pipeline-reviewer`, `harness-optimizer`, `loop-operator`, `agent-evaluator`, `gan-planner`, `gan-generator`, `gan-evaluator`, and more.
 
 ---
 
