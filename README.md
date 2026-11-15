@@ -78,17 +78,17 @@ HyperCraft bundles 4 pre-configured personas ready for delegation:
 
 ### Option 1: Via the Universal Skills CLI
 ```bash
-npx skills add <your-username>/hypercraft-skills
+npx skills add Hero-Coco/hypercraft-skills
 ```
 
 ### Option 2: Antigravity / Gemini Plugin Install
 ```bash
-agy plugin install https://github.com/<your-username>/hypercraft-skills.git
+agy plugin install https://github.com/Hero-Coco/hypercraft-skills.git
 ```
 
 ### Option 3: Direct Git Clone
 ```bash
-git clone https://github.com/<your-username>/hypercraft-skills.git
+git clone https://github.com/Hero-Coco/hypercraft-skills.git
 ```
 
 ---
