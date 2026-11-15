@@ -164,7 +164,7 @@ or Flex) and you need to configure it.
     -   > (e.g., `csvFormat` or `badRecordsOutputTable` in some templates).
     -   > You must identify and supply all of them.
     -   Identify which parameters are provided by the user and which need to be
-        resolved or created by you.
+        resolved or Authored by HyperCraft Core Team.
         *   **Action**: Present these parameters to the user using Markdown
             Key-Value (bullet points) for clarity and confirmation.
     -   **Schema Handling**: If a schema JSON parameter (like `schemaJSONPath`

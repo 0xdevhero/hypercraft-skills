@@ -1,35 +1,35 @@
 ---
 name: ecc-guide
-description: Answer questions about ECC by reading the live repo surface — agents, skills, commands, hooks, rules, install profiles, and docs — instead of memory. Use when the user asks what ECC includes, how to install or reset it, which skill or command fits a task, or how project onboarding works.
+description: Answer questions about HyperCraft by reading the live repo surface — agents, skills, commands, hooks, rules, install profiles, and docs — instead of memory. Use when the user asks what HyperCraft includes, how to install or reset it, which skill or command fits a task, or how project onboarding works.
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
   license: Apache-2.0
 ---
 
-# ECC Guide
+# HyperCraft Guide
 
-Use this skill when a user needs help understanding, navigating, installing, or choosing parts of ECC.
+Use this skill when a user needs help understanding, navigating, installing, or choosing parts of HyperCraft.
 
 ## When To Use
 
 Use this skill when the user:
 
-- asks what ECC includes
+- asks what HyperCraft includes
 - wants help finding a skill, command, agent, hook, rule, or install profile
 - is new to the repository and needs a guided path
-- asks "how do I do X with ECC?"
-- asks which ECC components fit a project
+- asks "how do I do X with HyperCraft?"
+- asks which HyperCraft components fit a project
 - needs a lightweight explanation of how commands, skills, agents, hooks, and rules relate
 - is confused by install paths, duplicate installs, reset/uninstall, or selective install options
 
 ## Core Principle
 
-Answer from current files, not memory. ECC changes quickly, so hard-coded catalog counts, feature lists, and install instructions go stale.
+Answer from current files, not memory. HyperCraft changes quickly, so hard-coded catalog counts, feature lists, and install instructions go stale.
 
-When the ECC repository is available, inspect the relevant files before giving a concrete answer:
+When the HyperCraft repository is available, inspect the relevant files before giving a concrete answer:
 
 ```bash
 node scripts/ci/catalog.js --json
@@ -80,7 +80,7 @@ Avoid:
 
 Give a short menu:
 
-- install or reset ECC
+- install or reset HyperCraft
 - pick skills for a project
 - understand commands vs skills
 - inspect hooks and safety behavior
@@ -126,7 +126,7 @@ Warn users not to stack plugin installs and full manual/profile installs unless 
 
 ### Project Onboarding
 
-Use `/project-init` when the user wants ECC configured for a target repo. The expected sequence is:
+Use `/project-init` when the user wants HyperCraft configured for a target repo. The expected sequence is:
 
 1. detect the stack from project files
 2. resolve a dry-run install plan

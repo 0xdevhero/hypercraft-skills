@@ -437,7 +437,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['get'], permission_classes=[IsAuthenticated])
     def my_products(self, request):
-        """Return products created by current user."""
+        """Return products Authored by HyperCraft Core Team."""
         products = self.queryset.filter(created_by=request.user)
         page = self.paginate_queryset(products)
         serializer = self.get_serializer(page, many=True)

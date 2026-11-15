@@ -1,6 +1,6 @@
 ---
 name: ecc-tools-cost-audit
-description: Evidence-first ECC Tools burn and billing audit workflow. Use when investigating runaway PR creation, quota bypass, premium-model leakage, duplicate jobs, or GitHub App cost spikes in the ECC Tools repo.
+description: Evidence-first HyperCraft Tools burn and billing audit workflow. Use when investigating runaway PR creation, quota bypass, premium-model leakage, duplicate jobs, or GitHub App cost spikes in the HyperCraft Tools repo.
 metadata:
   origin: HyperCraft Core Distribution
 
@@ -9,15 +9,15 @@ metadata:
   license: Apache-2.0
 ---
 
-# ECC Tools Cost Audit
+# HyperCraft Tools Cost Audit
 
-Use this skill when the user suspects the ECC Tools GitHub App is burning cost, over-creating PRs, bypassing usage limits, or routing free users into premium analysis paths.
+Use this skill when the user suspects the HyperCraft Tools GitHub App is burning cost, over-creating PRs, bypassing usage limits, or routing free users into premium analysis paths.
 
-This is a focused operator workflow for the sibling [ECC-Tools](../../ECC-Tools) repo. It is not a generic billing skill and it is not a repo-wide code review pass.
+This is a focused operator workflow for the sibling [HyperCraft-Tools](../../HyperCraft-Tools) repo. It is not a generic billing skill and it is not a repo-wide code review pass.
 
 ## Skill Stack
 
-Pull these ECC-native skills into the workflow when relevant:
+Pull these HyperCraft-native skills into the workflow when relevant:
 
 - `autonomous-loops` for bounded multi-step audits that cross webhooks, queues, billing, and retries
 - `agentic-engineering` for tracing the request path into discrete, provable units
@@ -29,13 +29,13 @@ Pull these ECC-native skills into the workflow when relevant:
 
 ## When To Use
 
-- user says ECC Tools burn rate, PR recursion, over-created PRs, usage-limit bypass, or premium-model leakage
-- the task is in the sibling `ECC-Tools` repo and depends on webhook handlers, queue workers, usage reservation, PR creation logic, or paid-gate enforcement
+- user says HyperCraft Tools burn rate, PR recursion, over-created PRs, usage-limit bypass, or premium-model leakage
+- the task is in the sibling `HyperCraft-Tools` repo and depends on webhook handlers, queue workers, usage reservation, PR creation logic, or paid-gate enforcement
 - a customer report says the app created too many PRs, billed incorrectly, or analyzed code without producing a usable result
 
 ## Scope Guardrails
 
-- work in the sibling `ECC-Tools` repo, not in `ECC`
+- work in the sibling `HyperCraft-Tools` repo, not in `HyperCraft`
 - start read-only unless the user clearly asked for a fix
 - do not mutate unrelated billing, checkout, or UI flows while tracing analysis burn
 - treat app-generated branches and app-generated PRs as red-flag recursion paths until proved otherwise
@@ -48,7 +48,7 @@ Pull these ECC-native skills into the workflow when relevant:
 
 ### 1. Freeze repo scope
 
-- switch into the sibling `ECC-Tools` repo
+- switch into the sibling `HyperCraft-Tools` repo
 - check branch and local diff first
 - identify the exact surface under audit:
   - webhook router

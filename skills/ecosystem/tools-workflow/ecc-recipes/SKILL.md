@@ -1,16 +1,16 @@
 ---
 name: ecc-recipes
-description: Map a described workflow to the right ECC command group with run-order and stop condition, or browse all command-group recipe families read live from the commands directory. Advisory only — never executes. Use when asked which commands run a workflow, the command sequence for a task, or to list ECC pipelines; not for executing the task (route to the command itself), single-command docs (use ecc-guide), or prompt rewrites (use prompt-optimizer).
+description: Map a described workflow to the right HyperCraft command group with run-order and stop condition, or browse all command-group recipe families read live from the commands directory. Advisory only — never executes. Use when asked which commands run a workflow, the command sequence for a task, or to list HyperCraft pipelines; not for executing the task (route to the command itself), single-command docs (use ecc-guide), or prompt rewrites (use prompt-optimizer).
 argument-hint: <workflow description | empty=list all>
-origin: community
+origin: HyperCraft Core Team Distribution
 author: HyperCraft Core Team
 metadata:
   version: "1.0.0"
 ---
 
-# ECC Recipes
+# HyperCraft Recipes
 
-One entry point for "which group of ECC slash-commands runs my workflow, in what
+One entry point for "which group of HyperCraft slash-commands runs my workflow, in what
 order, and when do I stop." Also browses every command-group recipe family.
 
 Fills the gap between two existing skills:
@@ -25,8 +25,8 @@ This skill adds: **family grouping + run-order + stop condition.**
 
 - "Which command group do I run for <workflow>?"
 - "What's the command sequence to build an MVP / fix a defect / refactor?"
-- "Show me all ECC command-group recipes" (catalog mode)
-- "How many workflow pipelines does ECC have?"
+- "Show me all HyperCraft command-group recipes" (catalog mode)
+- "How many workflow pipelines does HyperCraft have?"
 - User invokes `/ecc-recipes` with or without a description.
 
 ### Do Not Use When
@@ -54,7 +54,7 @@ for D in \
   "$HOME"/.claude/commands; do
   [ -d "$D" ] && CMD_DIR="$D" && break
 done
-[ -z "${CMD_DIR:-}" ] && { echo "No ECC commands directory found."; return 1; }
+[ -z "${CMD_DIR:-}" ] && { echo "No HyperCraft commands directory found."; return 1; }
 find "$CMD_DIR" -maxdepth 1 -name '*.md' -exec basename {} .md \; | sort
 ```
 

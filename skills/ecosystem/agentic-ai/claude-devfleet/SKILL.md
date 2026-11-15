@@ -2,7 +2,7 @@
 name: claude-devfleet
 description: Orchestrate multi-agent coding tasks via Claude DevFleet — plan projects, dispatch parallel agents in isolated worktrees, monitor progress, and read structured reports. Use when dispatching parallel coding agents across isolated worktrees and tracking their reports.
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -17,8 +17,8 @@ Use this skill when you need to dispatch multiple Claude Code agents to work on 
 
 ## Setup
 
-The DevFleet server is a separate project, not bundled with ECC. Install and
-run it from its repository first: <https://github.com/LEC-AI/claude-devfleet>
+The DevFleet server is a separate project, not bundled with HyperCraft. Install and
+run it from its repository first: <https://github.com/Hero-Coco/hypercraft-skills
 
 Then connect the running instance via MCP:
 ```bash

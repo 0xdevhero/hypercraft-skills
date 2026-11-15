@@ -1,6 +1,6 @@
 ---
 name: ito-training
-description: Inspect the availability of ML training on a completed Itô compute booking and, when the canonical backend becomes available, hand off an explicitly confirmed training manifest. Use after ito-compute has booked GPU nodes and the user wants pre-training, fine-tuning, or RL on that metal. ECC implements no training stack of its own.
+description: Inspect the availability of ML training on a completed Itô compute booking and, when the canonical backend becomes available, hand off an explicitly confirmed training manifest. Use after ito-compute has booked GPU nodes and the user wants pre-training, fine-tuning, or RL on that metal. HyperCraft implements no training stack of its own.
 metadata:
   origin: HyperCraft Core Distribution
   status: scaffold
@@ -12,17 +12,17 @@ metadata:
 
 # Itô Training
 
-`ito-training` is the canonical ECC skill for training on Itô compute. ECC
+`ito-training` is the canonical HyperCraft skill for training on Itô compute. HyperCraft
 never runs a trainer, scheduler, or data pipeline of its own; it never books,
 reserves, or spends. This skill chains off a **completed booking** from
 `ito-compute`.
 
 ## Current production boundary
 
-Managed training is unavailable today. The ECC bridge exposes only `login`,
+Managed training is unavailable today. The HyperCraft bridge exposes only `login`,
 `logout`, `auth`, `find`, `status`, and explicitly gated `evals`. It has no
 `train` verb, and the canonical CLI's `run` verb and desk `training-run`
-backend remain scaffolds. The locally enforceable guarantee is that ECC rejects
+backend remain scaffolds. The locally enforceable guarantee is that HyperCraft rejects
 `train` before resolving or spawning the credential-bearing canonical client.
 
 Therefore stop before authentication or any command invocation. Report the
@@ -64,7 +64,7 @@ That digest must exactly equal the digest bound into confirmation before any
 workload mutation. A path swap, digest mismatch, oversized file, or mutable
 unsafe file fails closed.
 
-The canonical API—not ECC—must own workload creation and return structured JSON
+The canonical API—not HyperCraft—must own workload creation and return structured JSON
 with `ok`, `live_api_contacted`, `notice`, and either `data` or `error`.
 Training data must include stable booking, run, manifest, and idempotency IDs
 plus a state enum. Errors must include a stable code and safe message without
@@ -107,7 +107,7 @@ separate economic action was explicitly authorized.
 ## Proposed backend stages
 
 These stages describe the future backend (Layer 0.3), not code that exists in
-ECC:
+HyperCraft:
 
 1. Data prep — manifest, dedup, decontamination against the eval suite;
    150M-ladder decision job as the cheap pre-check for custom data.

@@ -1,6 +1,6 @@
 ---
 name: configure-ecc
-description: "Run the conversational ECC setup wizard inside the current harness: inventory the install, collect scope (user/project/local) and hook mode (off/minimal/standard/strict) in Claude Code, use Codex's native plugin lifecycle, or install the project surface under ./.kimi-code, then preview, apply, and verify. Use when installing, updating, reconfiguring, or repairing an ECC installation, changing hook profiles, or moving ECC between install scopes."
+description: "Run the conversational HyperCraft setup wizard inside the current harness: inventory the install, collect scope (user/project/local) and hook mode (off/minimal/standard/strict) in Claude Code, use Codex's native plugin lifecycle, or install the project surface under ./.kimi-code, then preview, apply, and verify. Use when installing, updating, reconfiguring, or repairing an HyperCraft installation, changing hook profiles, or moving HyperCraft between install scopes."
 metadata:
   origin: HyperCraft Core Distribution
 
@@ -9,11 +9,11 @@ metadata:
   license: Apache-2.0
 ---
 
-# Configure ECC
+# Configure HyperCraft
 
 Run a conversational wizard inside the current harness. Inventory first, collect
 only supported choices, preview, confirm once, apply non-interactively, verify,
-and show the welcome only after success. Never clone ECC into a temporary
+and show the welcome only after success. Never clone HyperCraft into a temporary
 directory or copy plugin components by hand.
 
 For a human-operated terminal, the canonical entry points are `ecc setup` and
@@ -24,9 +24,9 @@ commands below instead.
 
 - In Claude Code, use the full scope-and-hook wizard below.
 - In Codex, use Codex's native plugin lifecycle. Do not offer Claude scopes or
-  map ECC's four Claude hook profiles onto Codex.
+  map HyperCraft's four Claude hook profiles onto Codex.
 - In Kimi, install the project surface under `./.kimi-code`. Kimi does not
-  provide ECC's Claude lifecycle-hook profiles.
+  provide HyperCraft's Claude lifecycle-hook profiles.
 - If the harness is uncertain, state the detected evidence and ask which
   harness to configure before running a mutating command.
 
@@ -37,7 +37,7 @@ replace a provider's built-in first-install UI.
 
 ### 1. Inventory without changing anything
 
-Run both commands and summarize the installed ECC scope, enabled state, and
+Run both commands and summarize the installed HyperCraft scope, enabled state, and
 marketplace source:
 
 ```bash
@@ -47,7 +47,7 @@ claude plugin marketplace list --json
 
 Treat a single existing `ecc@ecc` installation as a reconfiguration. Do not
 interpret Claude's provider-owned "Open home page" control as installation
-evidence. Stop and report the recovery returned by setup for multiple ECC
+evidence. Stop and report the recovery returned by setup for multiple HyperCraft
 scopes, a legacy/manual install, malformed settings, or a marketplace collision;
 never guess which state to delete.
 
@@ -67,7 +67,7 @@ scope migration and include `--move-scope` in the commands below.
 Ask exactly one hook-mode question and require one value:
 
 - `off | minimal | standard | strict`
-- `off` keeps skills and commands but disables ECC hook automation.
+- `off` keeps skills and commands but disables HyperCraft hook automation.
 - `minimal` enables the lightest lifecycle and safety automation.
 - `standard` balances quality and safety automation.
 - `strict` enables the strongest checks and reminders.
@@ -150,10 +150,10 @@ provider-specific hooks, but Codex requires explicit trust for them. Let Codex
 show that trust decision; do not ask the Claude four-profile hook question or
 claim those profiles map to Codex.
 
-If the ECC marketplace is missing, add it. Otherwise refresh its snapshot:
+If the HyperCraft marketplace is missing, add it. Otherwise refresh its snapshot:
 
 ```bash
-codex plugin marketplace add affaan-m/ECC
+codex plugin marketplace add HyperCraft/HyperCraft
 codex plugin marketplace upgrade ecc --json
 ```
 
@@ -165,7 +165,7 @@ codex plugin add ecc@ecc --json
 codex plugin list --json
 ```
 
-Continue only when the JSON reports ECC installed and provides its
+Continue only when the JSON reports HyperCraft installed and provides its
 `installedPath`. Then render the verified bundle's welcome:
 
 Use only the exact absolute `installedPath` returned by Codex JSON. Reject
@@ -186,7 +186,7 @@ applied to Codex.
 ## Kimi: install the project surface
 
 State the capability summary before confirmation: destination
-`./.kimi-code`; `hooks=unsupported` for ECC lifecycle hooks. Do not ask the
+`./.kimi-code`; `hooks=unsupported` for HyperCraft lifecycle hooks. Do not ask the
 Claude scope or hook-mode questions. Preview first:
 
 ```bash
@@ -207,4 +207,4 @@ inside `./.kimi-code`, render:
 npx --yes --package ecc-universal ecc welcome --action configured
 ```
 
-Do not claim that Kimi installed or configured ECC lifecycle hooks.
+Do not claim that Kimi installed or configured HyperCraft lifecycle hooks.

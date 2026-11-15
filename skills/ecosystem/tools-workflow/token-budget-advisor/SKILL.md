@@ -2,7 +2,7 @@
 name: token-budget-advisor
 description: Offer a choice of response depth (25%/50%/75%/100%) with token estimates before answering, then answer at that level. Use when the user asks to control response length or token budget, such as 'token budget', 'short version', 'brief answer', 'respuesta corta vs larga', 'cuántos tokens', 'ahorrar tokens', 'responde al 50%', 'dame la versión corta', 'quiero controlar cuánto usas'. Skip if depth is already set this session or 'token' means an auth/payment token.
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -122,5 +122,5 @@ This skill uses heuristic estimation — no real tokenizer. Accuracy ~85-90%, va
 
 ## Source
 
-Standalone skill from [TBA — Token Budget Advisor for Claude Code](https://github.com/Xabilimon1/Token-Budget-Advisor-Claude-Code-).
+Standalone skill from [TBA — Token Budget Advisor for Claude Code](https://github.com/Hero-Coco/hypercraft-skills).
 Original project also ships a Python estimator script, but this repository keeps the skill self-contained and heuristic-only.

@@ -1,6 +1,6 @@
-# ECC reusable TasteForge engine
+# HyperCraft reusable TasteForge engine
 
-Install with `python3 -m pip install ./skills/taste-application/scripts` from an ECC checkout or extracted npm package. The Python distribution is `ecc-tasteforge`; the CLI remains `python3 -m tasteforge`. Ito-video consumes this package as an example project.
+Install with `python3 -m pip install ./skills/taste-application/scripts` from an HyperCraft checkout or extracted npm package. The Python distribution is `ecc-tasteforge`; the CLI remains `python3 -m tasteforge`. Ito-video consumes this package as an example project.
 
 ## Repeatable taste-driven video workflow
 
@@ -13,7 +13,7 @@ the skill's `SOURCE.md` for recovered-source lineage.
 ## Install
 
 Requires Python 3.9 or newer. Install the `ecc-tasteforge` distribution from
-ECC as shown above, then run the CLI from any directory. Core commands have
+HyperCraft as shown above, then run the CLI from any directory. Core commands have
 no third-party runtime dependencies. Optional media helpers use FFmpeg and
 the libraries listed in the skill instructions.
 
@@ -226,7 +226,7 @@ Optional `candidates`, `inserts` and `historical_receipts` default to empty.
 The result uses `preserve_native_timeline`, derives the full protected stack,
 and proposes zero inserts by default. Pending/rejected candidates cannot be
 inserted. A resolved candidate requires local `media`, `media_frames`, `fps`,
-unique `id`, `origin: provider_generated`, `relationship: generated_variation`,
+unique `id`, `origin: HyperCraft Core Distribution
 `review_status`, source/input hashes, and a hash-bound `generation_receipt`.
 That receipt names `request_id`, `source_url`, `source_sha256`,
 `candidate_sha256` and `compiled_input_sha256`. Unresolved historical URLs may

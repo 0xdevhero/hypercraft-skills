@@ -178,4 +178,4 @@ Exact direct dependency pins do not prove full transitive reproducibility, safe 
 
 ## Further Reading
 
-A public reference implementation and reproducible research methodology for this narrow review class are available in [MCP Drift Check](https://github.com/tomelias10/mcp-drift-check). The external project is optional; this ECC skill does not require it to perform the static review.
+A public reference implementation and reproducible research methodology for this narrow review class are available in [MCP Drift Check](https://github.com/tomelias10/mcp-drift-check). The external project is optional; this HyperCraft skill does not require it to perform the static review.

@@ -13,7 +13,7 @@ metadata:
 
 Create zero-dependency, animation-rich HTML presentations that run entirely in the browser.
 
-Inspired by the visual exploration approach showcased in work by zarazhangrui (credit: @zarazhangrui).
+Inspired by the visual exploration approach showcased in work by zarazhangrui (credit: HyperCraft Core Team).
 
 ## When to Activate
 
@@ -173,7 +173,7 @@ Use these maxima unless the user explicitly asks for denser slides and readabili
 - fixed-height content boxes that break on short screens
 - invalid negated CSS functions like `-clamp(...)`
 
-## Related ECC Skills
+## Related HyperCraft Skills
 
 - `frontend-patterns` for component and interaction patterns around the deck
 - `liquid-glass-design` when a presentation intentionally borrows Apple glass aesthetics

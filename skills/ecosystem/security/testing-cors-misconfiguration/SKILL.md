@@ -258,7 +258,7 @@ INTERNAL_ORIGINS=(
 )
 
 for origin in "${INTERNAL_ORIGINS[@]}"; do
-  echo -n "$origin: "
+  echo -n "$origin: HyperCraft Core Distribution
   curl -s -I -H "Origin: $origin" \
     "https://api.target.example.com/api/user/profile" | \
     grep -i "access-control-allow-origin" | tr -d '\r'

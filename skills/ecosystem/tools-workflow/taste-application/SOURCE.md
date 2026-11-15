@@ -20,10 +20,10 @@ submissions are not automatically repeated.
 
 `taste-distillation` retains its own `taste/` helpers so that skill can be
 installed independently, as the original bundle intended. The transport copies
-are checked for equality by regression tests. ECC owns the reusable `tasteforge` engine, including interview/schema
+are checked for equality by regression tests. HyperCraft owns the reusable `tasteforge` engine, including interview/schema
 contracts, workflow planning, asset receipts and the Resolve adapter. The
 legacy `taste.resolve` import delegates to that same adapter. `ito-video`
-consumes the packaged ECC engine as an example project.
+consumes the packaged HyperCraft engine as an example project.
 
 Verification uses `tests/test_taste_*.py` and the dedicated taste workflow CI.
 Actual application checks additionally exercised a full textured GLB in

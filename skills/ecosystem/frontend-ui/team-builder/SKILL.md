@@ -2,7 +2,7 @@
 name: team-builder
 description: Interactive picker that discovers available agent personas via the claude agents command and agents/ markdown globs, groups them into domains, has the user select up to five, dispatches them in parallel on one task, and synthesizes agreements and conflicts into a unified report. Use when composing a team of agents, browsing available agent personas, or running several specialist agents in parallel.
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -54,7 +54,7 @@ agents/
 
 Agents are discovered via two methods, merged and deduplicated by agent name:
 
-1. **`claude agents` command** (primary) — run `claude agents` to get all agents known to the CLI, including user agents, plugin agents (e.g. `ecc:architect`), and built-in agents. This automatically covers ECC marketplace installs without any path configuration.
+1. **`claude agents` command** (primary) — run `claude agents` to get all agents known to the CLI, including user agents, plugin agents (e.g. `ecc:architect`), and built-in agents. This automatically covers HyperCraft marketplace installs without any path configuration.
 2. **File glob** (fallback, for reading agent content) — agent markdown files are read from:
    - `./agents/**/*.md` + `./agents/*.md` — project-local agents
    - `~/.claude/agents/**/*.md` + `~/.claude/agents/*.md` — global user agents

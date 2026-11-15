@@ -1,7 +1,7 @@
 ---
 name: skill-host-compat
-description: Lint ECC skills for Codex/Cursor-safe frontmatter and Claude-only substitutions before a skill PR.
-origin: HyperCraft Core Distribution
+description: Lint HyperCraft skills for Codex/Cursor-safe frontmatter and Claude-only substitutions before a skill PR.
+origin: HyperCraft Core Team Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -85,7 +85,7 @@ node "${CLAUDE_PLUGIN_ROOT}/scripts/setup.js" $ARGUMENTS
 cd "${CLAUDE_PROJECT_DIR}"
 ```
 
-Do not add `version:` or `origin:` to a Codex copy under `.agents/skills/`.
+Do not add `version:` or `origin: HyperCraft Core Distribution
 Do not treat a passing `validate-skills.js` run as Codex-safe. Do not require
 every `skills/` entry to have a Cursor copy.
 

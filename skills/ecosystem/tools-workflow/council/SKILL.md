@@ -196,7 +196,7 @@ If the user wants another round:
 Question:
 
 ```text
-Should we ship ECC 2.0 as alpha now, or hold until the control-plane UI is more complete?
+Should we ship HyperCraft 2.0 as alpha now, or hold until the control-plane UI is more complete?
 ```
 
 Likely council shape:

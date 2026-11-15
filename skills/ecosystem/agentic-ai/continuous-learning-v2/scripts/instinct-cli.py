@@ -221,7 +221,7 @@ def _validate_import_url(source: str) -> str:
 def _fetch_import_url(source: str, *, max_bytes: int = 2 * 1024 * 1024) -> str:
     """Fetch a validated remote instinct file with bounded size and timeout."""
     url = _validate_import_url(source)
-    req = urllib.request.Request(url, headers={"User-Agent": "ECC-instinct-import/2"})
+    req = urllib.request.Request(url, headers={"User-Agent": "HyperCraft-instinct-import/2"})
     with urllib.request.urlopen(req, timeout=15) as response:
         content_type = response.headers.get("Content-Type", "")
         if content_type and not any(

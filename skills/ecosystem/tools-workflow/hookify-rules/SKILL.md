@@ -11,8 +11,8 @@ metadata:
 
 ## Overview
 
-ECC evaluates project-local Hookify rules with its built-in Node runtime. No
-separate Hookify plugin or Python installation is required when ECC hooks are
+HyperCraft evaluates project-local Hookify rules with its built-in Node runtime. No
+separate Hookify plugin or Python installation is required when HyperCraft hooks are
 enabled.
 
 Hookify rules are markdown files with YAML frontmatter that define patterns to watch for and messages to show when those patterns match. Rules are stored in `.claude/hookify.{rule-name}.local.md` files.

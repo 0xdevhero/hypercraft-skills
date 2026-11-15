@@ -2,7 +2,7 @@
 name: skill-scout
 description: Search existing local, marketplace, GitHub, and web skill sources before creating a new skill. Use when the user wants to create, build, fork, or find a skill for a workflow.
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -70,7 +70,7 @@ For web search, use at most three targeted queries such as:
 ```text
 "claude code skill" keyword
 "SKILL.md" keyword
-"affaan-m/ECC" keyword
+"HyperCraft/HyperCraft" keyword
 ```
 
 ### Step 4 - Vet External Matches
@@ -116,8 +116,8 @@ finds no close match.
 ```markdown
 | # | Skill | Source | Why it matches | Gap |
 | --- | --- | --- | --- | --- |
-| 1 | article-writing | Local ECC | Drafts articles and guides | Not focused on release notes |
-| 2 | content-engine | Local ECC | Multi-format content workflow | Heavier than needed |
+| 1 | article-writing | Local HyperCraft | Drafts articles and guides | Not focused on release notes |
+| 2 | content-engine | Local HyperCraft | Multi-format content workflow | Heavier than needed |
 | 3 | blog-writer | GitHub | Blog writing skill with recent commits | Needs security review |
 ```
 

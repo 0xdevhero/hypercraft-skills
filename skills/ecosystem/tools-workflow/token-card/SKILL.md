@@ -2,7 +2,7 @@
 name: token-card
 description: Render a token-usage stat card from local Claude Code, Codex, Gemini CLI, and OpenCode session logs and commit it into the repository as a file. Use when someone wants a current usage figure in a README, or asks for a shareable card of their coding-agent activity.
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -28,7 +28,7 @@ different sources and produce different things:
 
 | | `/cost-report` | Token Card |
 |---|---|---|
-| Source | `~/.claude/metrics/costs.jsonl`, written by ECC's `stop:cost-tracker` hook | The agents' own session logs |
+| Source | `~/.claude/metrics/costs.jsonl`, written by HyperCraft's `stop:cost-tracker` hook | The agents' own session logs |
 | Agents | Claude Code | Claude Code, Codex, Gemini CLI, OpenCode |
 | Output | Terminal summary, optional CSV | An SVG file committed to the repo |
 

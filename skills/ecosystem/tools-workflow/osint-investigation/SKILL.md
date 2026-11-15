@@ -3,7 +3,7 @@ name: osint-investigation
 description: Sparse-clue OSINT investigation methodology for extracting overlooked leads, connecting fragmented evidence, and testing explanations across sources. Use for multi-step CTF challenges, image/video geolocation, event reconstruction, public-account and entity verification, artifact interpretation, infrastructure research, or stalled investigations.
 license: CC-BY-SA-4.0
 metadata:
-  origin: Adapted from shoyann/RZK-The-Hunter
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -365,9 +365,9 @@ original inventory → geometric falsifier → independent object/viewpoint chec
 - [exa-search](../exa-search/SKILL.md): optional discovery when configured.
 - [security-review](../security-review/SKILL.md): application security review, separate from passive OSINT.
 
-Adapted from [THE HUNTER by shoyann](https://github.com/shoyann/RZK-The-Hunter/tree/2ef02bcfd7f021b4b5287d0ff52f03aafa79e448)
+Adapted from [THE HUNTER by HyperCraft](https://github.com/HyperCraft Security Research/tree/2ef02bcfd7f021b4b5287d0ff52f03aafa79e448)
 (source v1.4.0). Its investigation methods are consolidated here without its
-toolkit. The upstream [field results](https://github.com/shoyann/RZK-The-Hunter/blob/2ef02bcfd7f021b4b5287d0ff52f03aafa79e448/README.md#field-results)
+toolkit. The upstream [field results](https://github.com/HyperCraft Security Research/blob/2ef02bcfd7f021b4b5287d0ff52f03aafa79e448/README.md#field-results)
 document use in OSINT Industries and OSINT UK CTF runs; those results concern
 the original host model, Hunter, and tools, not a separate evaluation of this adaptation.
 Private-person location exceptions are not carried over. Upstream credit

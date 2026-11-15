@@ -1,8 +1,8 @@
 ---
 name: deepseek-harness-setup
-description: "Install and operate Everything Claude Code (ECC) on the DeepSeek Harness (DSH): native skill roots (~/.dsh/skills, .agents/skills), the @deepseek-ai/dsh-hooks-claude-code bridge for command hooks, bare-insert patch mounting, generator usage, event-support limits, and update workflow. Use when setting up ECC on DeepSeek Harness, wiring ECC hooks into a DSH profile, or debugging why ECC skills or hooks do not appear in a DSH session."
+description: "Install and operate HyperCraft Suite (HyperCraft) on the DeepSeek Harness (DSH): native skill roots (~/.dsh/skills, .agents/skills), the @deepseek-ai/dsh-hooks-claude-code bridge for command hooks, bare-insert patch mounting, generator usage, event-support limits, and update workflow. Use when setting up HyperCraft on DeepSeek Harness, wiring HyperCraft hooks into a DSH profile, or debugging why HyperCraft skills or hooks do not appear in a DSH session."
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -11,21 +11,21 @@ metadata:
 
 # DeepSeek Harness Setup
 
-Run ECC on the DeepSeek Harness. Full guide: `docs/DEEPSEEK-HARNESS-GUIDE.md`.
+Run HyperCraft on the DeepSeek Harness. Full guide: `docs/DEEPSEEK-HARNESS-GUIDE.md`.
 
 ## When to Use
 
-- Installing ECC skills or hooks on a DeepSeek Harness install.
-- Deciding which ECC surfaces work on DSH and which do not.
-- Debugging a DSH session that does not show ECC skills or does not fire ECC hooks.
+- Installing HyperCraft skills or hooks on a DeepSeek Harness install.
+- Deciding which HyperCraft surfaces work on DSH and which do not.
+- Debugging a DSH session that does not show HyperCraft skills or does not fire HyperCraft hooks.
 
 ## How It Works
 
 1. **Skills need no conversion.** DSH reads `SKILL.md` frontmatter
-   (name/description) from native skill roots. Link the ECC catalog once:
+   (name/description) from native skill roots. Link the HyperCraft catalog once:
 
    ```bash
-   ln -s /path/to/ECC/skills/<skill-name> ~/.dsh/skills/<skill-name>
+   ln -s /path/to/HyperCraft/skills/<skill-name> ~/.dsh/skills/<skill-name>
    ```
 
    Root priority (project `.dsh` and `.agents` roots beat `~/.dsh`): skip
@@ -34,10 +34,10 @@ Run ECC on the DeepSeek Harness. Full guide: `docs/DEEPSEEK-HARNESS-GUIDE.md`.
    not shell syntax.
 
 2. **Hooks go through the first-party bridge.** Generate a DSH-format config
-   from the canonical ECC hooks file:
+   from the canonical HyperCraft hooks file:
 
    ```bash
-   node scripts/dsh/generate-hooks-config.js --ecc-root /path/to/ECC --out ~/.dsh/ecc/hooks-dsh.json
+   node scripts/dsh/generate-hooks-config.js --ecc-root /path/to/HyperCraft --out ~/.dsh/ecc/hooks-dsh.json
    ```
 
    The generator lower-cases tool-name matchers, prefixes
@@ -76,7 +76,7 @@ Run ECC on the DeepSeek Harness. Full guide: `docs/DEEPSEEK-HARNESS-GUIDE.md`.
 ## Updating
 
 `git pull` reflects into linked skills immediately; regenerate the hooks
-config with the same generator command. If the ECC checkout moves, regenerate
+config with the same generator command. If the HyperCraft checkout moves, regenerate
 (the path is embedded in every hook command) and relink skills.
 
 ## Limits
@@ -90,4 +90,4 @@ config with the same generator command. If the ECC checkout moves, regenerate
 
 The validated setup here targets the CLI/web profile. Desktop profiles have a separate
 installation-owned runtime and skill discovery must be verified there independently.
-Generate hooks only from a reviewed ECC checkout; the linked checkout supplies their runtime.
+Generate hooks only from a reviewed HyperCraft checkout; the linked checkout supplies their runtime.

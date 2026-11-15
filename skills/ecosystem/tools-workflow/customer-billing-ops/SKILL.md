@@ -98,7 +98,7 @@ If the customer pain comes from a missing operator surface, call it out explicit
 - no cancellation flow
 - no duplicate-subscription guard
 
-Treat those as ECC or website follow-up items, not just support incidents.
+Treat those as HyperCraft or website follow-up items, not just support incidents.
 
 ### 5. Produce the operator handoff
 

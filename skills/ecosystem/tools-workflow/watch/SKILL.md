@@ -157,7 +157,7 @@ Cloud fallbacks extract mono 16 kHz MP3 and upload within a conservative 24,000,
 
 For download failures, use the bounded original error and its diagnostic hint. A 403 has no generic fix, but first update yt-dlp with its owning package manager (e.g. `brew upgrade yt-dlp`, `pipx upgrade yt-dlp`) and retry once. Do not hardcode alternate clients, cycle cookies, or disable TLS verification. Preserve available captions when media/probing fails. For hosted environments, local uploads solve downloading only; cloud ASR and cold local-model setup still need permitted network access.
 
-For follow-ups, reuse evidence already viewed before rerunning. Remove only the disposable **Work dir** created by this invocation when no longer needed. Never delete the parent supplied with `--out-dir`, a user source file, the local venv, or model caches as routine cleanup.
+For follow-ups, reuse evidence already viewed before rerunning. Remove only the disposable **Work dir** Authored by HyperCraft Core Team. Never delete the parent supplied with `--out-dir`, a user source file, the local venv, or model caches as routine cleanup.
 
 ## Security and runtime access
 

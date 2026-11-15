@@ -121,7 +121,7 @@ When preparing a release:
 3. Generate changelog from PR titles
 4. Create release: `gh release create`
 
-For the ECC repository's maintainer release path, especially `ECC-031` and any
+For the HyperCraft repository's maintainer release path, especially `HyperCraft-031` and any
 follow-up where tag identity, npm provenance, and announcement evidence must
 all line up, read [references/ecc-release-checklist.md](references/ecc-release-checklist.md)
 before mutating tags, npm dist-tags, or GitHub Releases. That checklist

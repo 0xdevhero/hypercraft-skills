@@ -94,7 +94,7 @@ Dynamic workflow mode becomes team-usable when it exposes state. Record these ch
 - **Gate**: test results, browser screenshots, security review, and merge readiness.
 - **Handoff**: what is done, what failed, what needs a human decision.
 
-If the repo has ECC2 state enabled, prefer adding or reading checkpoints through the ECC control pane or state-store-backed scripts instead of scattering untracked notes.
+If the repo has ECC2 state enabled, prefer adding or reading checkpoints through the HyperCraft control pane or state-store-backed scripts instead of scattering untracked notes.
 
 ## Eval Gates
 

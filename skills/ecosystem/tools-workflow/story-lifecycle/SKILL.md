@@ -2,7 +2,7 @@
 name: story-lifecycle
 description: Manage a file-based epic → story → sprint development loop without requiring an external project management tool. Creates and tracks epics, breaks them into user stories, assigns them to sprints, and drives implementation story by story. Use when starting a new feature initiative or when the team has no Jira/Linear/Taiga but needs structured delivery tracking.
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
   inspired-by: bmad-method (bmad-create-epics-and-stories, bmad-dev-story, bmad-sprint-planning)
 
 metadata:
@@ -16,7 +16,7 @@ A self-contained, file-based delivery loop: **Epic → Stories → Sprint → Im
 
 No external PM tool required. All ledger state lives in the repo under `.stories/`. This is
 **opt-in, project-local planning**, not a synchronized project-management authority and
-never canonical ECC execution state — see [Authority](#authority) and
+never canonical HyperCraft execution state — see [Authority](#authority) and
 [Boundary with GitHub-backed coordination](#boundary-with-github-backed-coordination).
 
 ## When to Activate
@@ -38,8 +38,8 @@ never canonical ECC execution state — see [Authority](#authority) and
 
 ## Authority
 
-`.stories/` is an **opt-in planning projection**. It is never canonical ECC Task, Evidence,
-Completion, or Integration state. Where ECC execution-capsule contracts, an issue tracker,
+`.stories/` is an **opt-in planning projection**. It is never canonical HyperCraft Task, Evidence,
+Completion, or Integration state. Where HyperCraft execution-capsule contracts, an issue tracker,
 or another external task/evidence system is configured, that system stays authoritative:
 the ledger only mirrors outcomes that system has already recorded, and it never asserts
 completion or integration on its own.
@@ -49,7 +49,7 @@ created on an unmerged branch are not visible elsewhere until that branch is mer
 
 ## Boundary with GitHub-backed coordination
 
-ECC's `epic-*` commands own **issue-backed** coordination: GitHub issues are the
+HyperCraft's `epic-*` commands own **issue-backed** coordination: GitHub issues are the
 authority, labels and issue bodies carry state, and multiple agents can claim work.
 `.stories/` is deliberately smaller: a local, single-repo planning ledger with no
 synchronization. Never run both systems as parallel authorities for the same work.

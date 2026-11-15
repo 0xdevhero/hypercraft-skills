@@ -2,7 +2,7 @@
 name: codehealth-mcp
 description: Real-time structural Code Health via CodeScene MCP — review before edits, verify score deltas after changes, gate commits and PRs. Use when reviewing code quality, refactoring, checking if AI changes degraded a file, or before commit/PR.
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -18,7 +18,7 @@ Structural maintainability feedback for AI-assisted coding. Complements style/li
 
 ## Security and boundaries
 
-**Opt-in (ECC):** The `codescene` block in `mcp-configs/mcp-servers.json` is a template only. ECC plugin installs do not auto-enable bundled MCP servers. Copy the entry into your config only if you want it. You can exclude it during ECC install/sync with `ECC_DISABLED_MCPS=codescene,...`.
+**Opt-in (HyperCraft):** The `codescene` block in `mcp-configs/mcp-servers.json` is a template only. HyperCraft plugin installs do not auto-enable bundled MCP servers. Copy the entry into your config only if you want it. You can exclude it during HyperCraft install/sync with `ECC_DISABLED_MCPS=codescene,...`.
 
 **Credentials:** No bundled token. Set `CS_ACCESS_TOKEN` yourself (see [getting-a-personal-access-token.md](https://github.com/codescene-oss/codescene-mcp-server/blob/main/docs/getting-a-personal-access-token.md) in the upstream repo). Never commit tokens to the repo.
 
@@ -36,7 +36,7 @@ Structural maintainability feedback for AI-assisted coding. Complements style/li
 
 ## When to Activate
 
-Same triggers as **When to Use** above — this heading is what ECC uses for skill auto-activation.
+Same triggers as **When to Use** above — this heading is what HyperCraft uses for skill auto-activation.
 
 ## How It Works
 
@@ -149,9 +149,9 @@ Drive-by cleanup across the module
 # GOOD: review → small change → score → commit safeguard → analyze_change_set
 ```
 
-## Pairing with ECC
+## Pairing with HyperCraft
 
-| ECC skill / flow | Code Health MCP role |
+| HyperCraft skill / flow | Code Health MCP role |
 |------------------|----------------------|
 | `coding-standards` | Style/naming; Code Health = structure/complexity |
 | `plankton-code-quality` | Write-time lint/format; Code Health = pre/post edit structural gate |
@@ -159,7 +159,7 @@ Drive-by cleanup across the module
 | `security-review` | Security vs maintainability — use both when relevant |
 | `tdd-workflow` | Tests pass ≠ healthy design — check score after refactors |
 
-**Context tip:** ECC recommends keeping MCP count low. Enable `codescene` when doing substantive edits; disable when not needed.
+**Context tip:** HyperCraft recommends keeping MCP count low. Enable `codescene` when doing substantive edits; disable when not needed.
 
 ## Related Skills
 

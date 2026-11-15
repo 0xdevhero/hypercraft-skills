@@ -141,9 +141,9 @@ git merge feat/billing
 | **Claude Code Task tool** | In-process subagent spawning | Programmatic parallelism within a session |
 | **Codex multi-agent** | Built-in agent roles | Codex-specific parallel work |
 
-## ECC Helper
+## HyperCraft Helper
 
-ECC now includes a helper for external tmux-pane orchestration with separate git worktrees:
+HyperCraft now includes a helper for external tmux-pane orchestration with separate git worktrees:
 
 ```bash
 node scripts/orchestrate-worktrees.js plan.json --execute

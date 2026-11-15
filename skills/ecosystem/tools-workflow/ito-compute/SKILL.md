@@ -9,9 +9,9 @@ metadata:
 
 # Itô Compute
 
-Use the canonical Itô compute CLI or MCP server. ECC does not implement a
+Use the canonical Itô compute CLI or MCP server. HyperCraft does not implement a
 parallel client, local simulation, reservation, workload runner, or inference
-server. ECC itself does no browser automation.
+server. HyperCraft itself does no browser automation.
 
 ## Install the canonical local package
 
@@ -31,7 +31,7 @@ Set `ECC_ITO_CLI_EXECUTABLE` to the explicit absolute built entry:
 /absolute/path/to/ito-cloud-runtime/cli/ito-compute-cli/dist/bin/ito.js
 ```
 
-ECC never discovers this credential-bearing client through `PATH`.
+HyperCraft never discovers this credential-bearing client through `PATH`.
 `ecc ito login` performs device authorization and never inherits `ITO_API_KEY`.
 The validation-only `auth`, plus `find` and `status`, forward `ITO_API_KEY`
 directly when configured; `ITO_AUTH_MODE=legacy` is not required. Never put a
@@ -39,10 +39,10 @@ key or token in arguments, tracked files, MCP results, logs, or chat.
 
 ## CLI workflow
 
-1. Run `ecc ito login` before the first operation. ECC delegates this to the
+1. Run `ecc ito login` before the first operation. HyperCraft delegates this to the
    canonical CLI's device authorization, which opens the Itô verification page
    by default and persists a device token in macOS Keychain. Use
-   `ecc ito login --no-browser` to suppress the page handoff. ECC itself does no
+   `ecc ito login --no-browser` to suppress the page handoff. HyperCraft itself does no
    browser automation. If the originating agent cannot complete the signed-in
    browser step, hand the exact command to the user; after approval finishes,
    return to the originating task and continue with `ecc ito auth`.
@@ -96,7 +96,7 @@ as fixed only when the canonical result contains a non-null firm quote.
 
 `ecc ito evals` exposes the canonical CLI's narrow live adapter to a separately
 installed `sixtytwo-cli==0.3.33`. It does not expose local fixture execution
-through ECC.
+through HyperCraft.
 Require all of the following before invoking it:
 
 - operator authorization to contact the named nodes;
@@ -115,7 +115,7 @@ ecc ito evals \
 
 The canonical adapter can run only the pinned version check and
 `sixtytwo test --full` against the explicit nodes. It cannot rent, launch,
-recover, repair, reset, purchase, or order resources. ECC does not forward
+recover, repair, reset, purchase, or order resources. HyperCraft does not forward
 `ITO_API_KEY` or model/cloud credentials into node qualification.
 
 ## MCP workflow
@@ -156,7 +156,7 @@ result carries `quote_class`.
 purchase, reserve, provision, or move funds. `accept` routes a quote to the desk
 for human review; it does not move funds or reserve capacity. `status` is
 read-oriented, though the provider endpoint may reconcile an existing procurement
-order. The passive dashboard link in ECC help is a separate user-operated web
+order. The passive dashboard link in HyperCraft help is a separate user-operated web
 route; do not open or operate it as a substitute for a missing CLI capability.
 
 ## Unsupported operations

@@ -13,7 +13,7 @@ metadata:
 
 The `orch-*` skills are thin wrappers. They do not re-implement any work — they
 classify the request, choose which phases of *this* pipeline run, and delegate
-each phase to an existing ECC agent or command. This file is that pipeline.
+each phase to an existing HyperCraft agent or command. This file is that pipeline.
 
 > Invoke an operation skill (`orch-add-feature`, `orch-fix-defect`, …) rather
 > than this engine directly. This file is the reference they point at.
@@ -34,7 +34,7 @@ each phase to an existing ECC agent or command. This file is that pipeline.
 | `orch-refine-code` | refactor | behavior stays, structure improves | restructure while keeping tests green |
 | `orch-build-mvp` | mvp | bootstrap from a design/spec doc | ingest doc → vertical slices |
 
-> These wrappers **compose** existing ECC commands rather than replace them:
+> These wrappers **compose** existing HyperCraft commands rather than replace them:
 > `/feature-dev`, `/plan`, `/code-review`, `/build-fix`, `/refactor-clean`, and
 > `/gan-build`, plus the `tdd-workflow` skill. The orch-* family adds the shared
 > size classifier and the two gates

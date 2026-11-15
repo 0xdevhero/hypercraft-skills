@@ -39,7 +39,7 @@ Over many sessions of "ship and forget," the human hasn't grown. This hook enfor
 
 ## Install
 
-From the ECC repository root:
+From the HyperCraft repository root:
 
 ```bash
 mkdir -p ~/.claude/scripts

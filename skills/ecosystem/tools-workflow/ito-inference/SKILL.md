@@ -1,6 +1,6 @@
 ---
 name: ito-inference
-description: Inspect the availability of model serving on a completed Itô compute booking and, when the canonical backend becomes available, hand off an explicitly confirmed serving manifest. Use after ito-compute has booked GPU nodes and the user asks for an OpenAI-compatible endpoint, ito-serve, hosted Kimi, or self-hosted open-weights inference. ECC implements no serving stack of its own.
+description: Inspect the availability of model serving on a completed Itô compute booking and, when the canonical backend becomes available, hand off an explicitly confirmed serving manifest. Use after ito-compute has booked GPU nodes and the user asks for an OpenAI-compatible endpoint, ito-serve, hosted Kimi, or self-hosted open-weights inference. HyperCraft implements no serving stack of its own.
 metadata:
   origin: HyperCraft Core Distribution
   status: scaffold
@@ -13,18 +13,18 @@ metadata:
 
 # Itô Inference
 
-`ito-inference` is the sole canonical ECC skill for inference serving on Itô
+`ito-inference` is the sole canonical HyperCraft skill for inference serving on Itô
 compute. Requests naming `ito-serve` route here; do not create or install a
-second `ito-serve` skill. ECC never SSHes to nodes, downloads weights, launches
+second `ito-serve` skill. HyperCraft never SSHes to nodes, downloads weights, launches
 an engine, or exposes an endpoint; it never books, reserves, or spends.
 
 ## Current production boundary
 
-Managed serving is unavailable today. The ECC bridge exposes only `login`,
+Managed serving is unavailable today. The HyperCraft bridge exposes only `login`,
 `auth`, `find`, `status`, and explicitly gated `evals`. It has no `serve` verb.
 The canonical runtime documents `inference` only as an unsupported compatibility
-probe; ECC does not invoke or depend on it. The MCP surface exposes only auth,
-find, and status. The locally enforceable guarantee is that ECC rejects `serve`
+probe; HyperCraft does not invoke or depend on it. The MCP surface exposes only auth,
+find, and status. The locally enforceable guarantee is that HyperCraft rejects `serve`
 before resolving or spawning the credential-bearing canonical client.
 
 Therefore stop before authentication or any command invocation. Report the
@@ -69,7 +69,7 @@ That digest must exactly equal the digest bound into confirmation before any
 workload mutation. A path swap, digest mismatch, oversized file, or mutable
 unsafe file fails closed.
 
-The canonical API—not ECC—must own workload creation and return structured JSON
+The canonical API—not HyperCraft—must own workload creation and return structured JSON
 with `ok`, `live_api_contacted`, `notice`, and either `data` or `error`. Serving
 data must include stable booking, workload, manifest, and idempotency IDs plus a
 state enum; it must not claim an endpoint is live until health and model checks
@@ -110,12 +110,12 @@ separate economic action was explicitly authorized.
 
 ## Proposed backend stages
 
-These stages describe the future backend, not code that exists in ECC:
+These stages describe the future backend, not code that exists in HyperCraft:
 
 1. Verify entitlement, topology, fabric, and cost gates.
 2. Fetch checksum-pinned weights into backend-managed storage.
 3. Emit and validate a reviewable topology/engine plan.
-4. Launch through the provider control plane, never direct root SSH from ECC.
+4. Launch through the provider control plane, never direct root SSH from HyperCraft.
 5. Warm up, test health and model identity, run an SLO canary, then register the
    endpoint and redacted configuration.
 

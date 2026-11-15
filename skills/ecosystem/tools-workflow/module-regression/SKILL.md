@@ -71,7 +71,7 @@ Related test points: TEST-ORDER-001, TEST-REFUND-003
 
 ## Audit Flow
 
-Invoke `module-regression` through the host's skill entry point, such as `$module-regression` in Codex. The current session plans and reports the audit. Repository commands run through the trusted host runner within existing user authorization; ask only when a command needs new authority. Successful exit codes are regression evidence, never canonical ECC completion or integration authority.
+Invoke `module-regression` through the host's skill entry point, such as `$module-regression` in Codex. The current session plans and reports the audit. Repository commands run through the trusted host runner within existing user authorization; ask only when a command needs new authority. Successful exit codes are regression evidence, never canonical HyperCraft completion or integration authority.
 
 1. **List changes** after selecting and recording the audit base, using the PR merge-base or last verified green commit. Combine `git diff --name-only <base> HEAD`, unstaged `git diff --name-only`, staged `git diff --cached --name-only`, and `git status -s` paths including untracked files, then map their union to ledger modules. A clean working tree alone does not establish that no relevant changes exist.
 2. **Resolve propagation** from each module's downstream list and rule.

@@ -1,6 +1,6 @@
 ---
 name: nasiko-control-plane
-description: Manage the experimental Nasiko CLI lifecycle through ECC — read-only status checks, consent-gated install of the pinned qualified version with dry-run preview, and ownership-checked uninstall, under explicit telemetry and secrets boundaries. Use when the user asks to install, inspect, or remove the Nasiko CLI or check whether it is present.
+description: Manage the experimental Nasiko CLI lifecycle through HyperCraft — read-only status checks, consent-gated install of the pinned qualified version with dry-run preview, and ownership-checked uninstall, under explicit telemetry and secrets boundaries. Use when the user asks to install, inspect, or remove the Nasiko CLI or check whether it is present.
 
 metadata:
   author: HyperCraft Core Team
@@ -9,18 +9,18 @@ metadata:
 
 # Nasiko CLI Lifecycle Bridge
 
-Use this skill when a user explicitly asks ECC to install, inspect, or remove
+Use this skill when a user explicitly asks HyperCraft to install, inspect, or remove
 the qualified Nasiko CLI. This skill does not operate a Nasiko control plane.
 
 ## Safety contract
 
 - Begin with `ecc nasiko status --json`. Status is read-only.
 - Installation always requires explicit user consent and `--yes`.
-- Install only an ECC-qualified pinned version, currently `v0.1.0`.
+- Install only an HyperCraft-qualified pinned version, currently `v0.1.0`.
 - Preview first with `ecc nasiko install --version v0.1.0 --dry-run --json`.
 - Install with `ecc nasiko install --version v0.1.0 --yes --json` only after the
   user reviews the version, registry origin, digest, and destination.
-- Remove only a still-qualified ECC-managed binary with
+- Remove only a still-qualified HyperCraft-managed binary with
   `ecc nasiko uninstall --version v0.1.0 --yes --json`. Preview removal with
   `--dry-run` first.
 - The qualified source is `https://github.com/Nasiko-Labs/nasiko`, licensed
@@ -28,15 +28,15 @@ the qualified Nasiko CLI. This skill does not operate a Nasiko control plane.
 - Never replace the qualified command with a downloaded shell or PowerShell
   bootstrap script.
 - Never put secrets or credentials in command arguments, logs, skill output,
-  install metadata, or ECC state.
+  install metadata, or HyperCraft state.
 - Nasiko telemetry and any sharing with Nasiko or Ito must be opt-in and
   separately disclosed. Installation is not telemetry consent.
 
 ## Lifecycle boundary
 
-The initial ECC bridge supports qualified installation, read-only status, and
+The initial HyperCraft bridge supports qualified installation, read-only status, and
 ownership-checked uninstall. Use the canonical Nasiko CLI directly for connection, authentication,
-launch, deployment, or shutdown until those verbs have their own verified ECC
+launch, deployment, or shutdown until those verbs have their own verified HyperCraft
 contracts. Do not guess CLI verbs.
 
 Installing the CLI does not prove that a control-plane server is running, an
@@ -48,6 +48,6 @@ was enabled, or Ito compute is connected. Report each state separately.
 - If the platform, architecture, version, manifest, digest, archive, binary, or
   destination fails validation, stop without executing the artifact.
 - Do not fall back to `latest`.
-- Do not search arbitrary `PATH` entries. Use ECC's qualified location or an
+- Do not search arbitrary `PATH` entries. Use HyperCraft's qualified location or an
   explicit absolute `ECC_NASIKO_CLI_EXECUTABLE` for development verification.
 - Do not treat a partial or ambiguous installation as success.

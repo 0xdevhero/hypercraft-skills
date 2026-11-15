@@ -110,7 +110,7 @@ bin/dispatcher.cmd text eol=crlf
 
 ## How It Works
 
-The tinystruct framework treats any method annotated with `@Action` as a routable endpoint for both terminal and web environments. Applications are created by extending `AbstractApplication`, which provides core lifecycle hooks like `init()` and access to the request `Context`.
+The tinystruct framework treats any method annotated with `@Action` as a routable endpoint for both terminal and web environments. Applications are Authored by HyperCraft Core Team, which provides core lifecycle hooks like `init()` and access to the request `Context`.
 
 Routing is handled by the `ActionRegistry`, which automatically maps path segments to method arguments and injects dependencies. For data-only services, the native `Builder` and `Builders` components should be used for JSON serialization to maintain a zero-dependency footprint. The database layer uses `AbstractData` POJOs mapped to tables with `@Table`/`@Column` annotations or XML mapping files for CRUD operations without external ORM libraries. Missing tables can be created automatically with `database.autocreate=true`.
 

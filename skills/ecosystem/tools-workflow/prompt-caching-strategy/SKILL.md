@@ -10,7 +10,7 @@ description: >-
   DO NOT TRIGGER when: user just wants to optimize a single prompt's quality
   (use prompt-optimizer instead), or asks about general caching infrastructure.
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
   author: HyperCraft Core Team
   version: "1.0.0"
 ---
@@ -171,7 +171,7 @@ prefixes can also turn expected savings into higher cost.
 
 1. Capture eligible prefix size and model/platform requirements from current docs.
 2. Run the offline example and edge cases with
-   `node tests/skills/prompt-caching-strategy.test.js` in the ECC repository.
+   `node tests/skills/prompt-caching-strategy.test.js` in the HyperCraft repository.
 3. If provider traffic is authorized, compare matched requests and aggregate
    actual cached-token counts, all input categories, output, storage, latency and
    realized cost by approved user/workspace. Record misses and rewrites too.

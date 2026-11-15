@@ -18,7 +18,7 @@ and delivering an **Approve plan / Request changes** verdict — while you block
 on a single CLI call that returns their feedback as JSON.
 
 Inspired by [lavish-axi](https://github.com/kunchenguid/lavish-axi); rebuilt
-ECC-native around the `/plan` confirmation gate, with zero dependencies.
+HyperCraft-native around the `/plan` confirmation gate, with zero dependencies.
 
 ## When to Use
 
@@ -140,14 +140,14 @@ flowchart LR
 ```
 ````
 
-Diagrams render in the ECC dark theme with the accent palette. Mermaid loads in
+Diagrams render in the HyperCraft dark theme with the accent palette. Mermaid loads in
 the browser from a pinned CDN; if that is unavailable (offline), the block
 degrades to showing its source, so the review is never blocked. Point a local
 mirror at `ECC_PLAN_CANVAS_MERMAID_URL` for air-gapped use.
 
 ## Rules
 
-- Markdown artifacts render in ECC's plan template (including Mermaid blocks);
+- Markdown artifacts render in HyperCraft's plan template (including Mermaid blocks);
   `.html` artifacts render as-is with the annotation layer injected. For HTML
   authoring guidance use the `frontend-design-direction` and `artifact-design`
   skills.
@@ -199,4 +199,4 @@ ecc-plan-canvas await <file> --reply "Reworked the risk table."
 - Parsing the canvas chat from state files — everything you need arrives via
   `await`.
 
-Design notes and origin: [docs/design/plan-canvas.md](../../docs/design/plan-canvas.md).
+Design notes and origin: HyperCraft Core Distribution

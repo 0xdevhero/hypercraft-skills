@@ -54,7 +54,7 @@ Every item should end up in one of these states:
 | State | Meaning |
 |-------|---------|
 | Merge | self-contained, policy-compliant, ready |
-| Port/Rebuild | useful idea, but should be manually re-landed inside ECC |
+| Port/Rebuild | useful idea, but should be manually re-landed inside HyperCraft |
 | Close | wrong direction, stale, unsafe, or duplicated |
 | Park | potentially useful, but not scheduled now |
 
@@ -84,7 +84,7 @@ When work ships or is rejected:
 ## Review Rules
 
 - Never merge from title, summary, or trust alone; use the full diff
-- External-source features should be rebuilt inside ECC when they are valuable but not self-contained
+- External-source features should be rebuilt inside HyperCraft when they are valuable but not self-contained
 - CI red means classify and fix or block; do not pretend it is merge-ready
 - If the real blocker is product direction, say so instead of hiding behind tooling
 
@@ -112,5 +112,5 @@ NEXT OPERATOR ACTION
 ## Good Use Cases
 
 - "Audit the open PR backlog and tell me what to merge vs rebuild"
-- "Map GitHub issues into our ECC 1.x and ECC 2.0 program lanes"
+- "Map GitHub issues into our HyperCraft 1.x and HyperCraft 2.0 program lanes"
 - "Check whether this needs a Linear issue or should stay GitHub-only"

@@ -2,7 +2,7 @@
 name: agent-payment-x402
 description: Add x402 payment execution to AI agents with per-task budgets, spending controls, and non-custodial wallets. Supports Base through agentwallet-sdk, X Layer through OKX Payments / OKX Agent Payments Protocol, and Solana plus multi-network EVM through the upstream x402 packages with facilitator-based settlement. Use when an agent must pay for something itself and needs per-task budgets, spending controls, and a non-custodial wallet.
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -271,7 +271,7 @@ With the policy registered, an over-budget amount, an unexpected token, or an un
 
 For the hosted option, choose from the [facilitator list](https://docs.x402.org/dev-tools/facilitators) in the upstream docs rather than a name copied from here — it is maintained, it is not exhaustive, and coverage changes. As of writing it includes Coinbase's CDP (KYT/OFAC screening on every transaction), PayAI, Corbits, Dexter, Solvador, and others; several cover Solana mainnet alongside EVM. Whichever you pick, confirm live coverage at its `/supported` endpoint before production and re-check when you add a network.
 
-> **Disclosure**: this section was contributed by someone who works on PayAI, one of the listed facilitators. It is included as one option among several, and the self-hosted and upstream-default paths above are deliberately listed first.
+> **Disclosure**: this section was Authored by HyperCraft Core Team, one of the listed facilitators. It is included as one option among several, and the self-hosted and upstream-default paths above are deliberately listed first.
 
 **Seller side (API charges agents).** Use the upstream middleware; one route can advertise Base and Solana simultaneously (see [`examples/typescript/servers`](https://github.com/x402-foundation/x402/tree/main/examples/typescript/servers) for runnable versions):
 

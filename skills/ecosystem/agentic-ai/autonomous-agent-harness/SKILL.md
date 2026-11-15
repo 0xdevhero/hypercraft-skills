@@ -17,7 +17,7 @@ Combine Claude Code's session tools with separately configured scheduling, memor
 
 Autonomous operation must be explicitly requested and scoped by the user. Do not create schedules, dispatch remote agents, write persistent memory, use computer control, post externally, modify third-party resources, or act on private communications unless the user has approved that capability and the target workspace for the current setup.
 
-Prefer dry-run plans and local queue files before enabling recurring or event-driven actions. Keep credentials, private workspace exports, personal datasets, and account-specific automations out of reusable ECC artifacts.
+Prefer dry-run plans and local queue files before enabling recurring or event-driven actions. Keep credentials, private workspace exports, personal datasets, and account-specific automations out of reusable HyperCraft artifacts.
 
 ## When to Activate
 
@@ -42,7 +42,7 @@ Prefer dry-run plans and local queue files before enabling recurring or event-dr
 │       │              │             │                │        │
 │       ▼              ▼             ▼                ▼        │
 │  ┌──────────────────────────────────────────────────────┐    │
-│  │              ECC Skill + Agent Layer                  │    │
+│  │              HyperCraft Skill + Agent Layer                  │    │
 │  │                                                      │    │
 │  │  skills/     agents/     commands/     hooks/        │    │
 │  └──────────────────────────────────────────────────────┘    │
@@ -176,21 +176,21 @@ description: Persistent task queue for autonomous operation
 
 ## Replacing Hermes
 
-| Hermes Component | ECC Equivalent | How |
+| Hermes Component | HyperCraft Equivalent | How |
 |------------------|---------------|-----|
 | Gateway/Router | CLI + external scheduler | An authenticated runner starts agent sessions |
 | Memory System | Claude memory + MCP memory server | Built-in persistence + knowledge graph |
 | Tool Registry | MCP servers | Dynamically loaded tool providers |
-| Orchestration | ECC skills + agents | Skill definitions direct agent behavior |
+| Orchestration | HyperCraft skills + agents | Skill definitions direct agent behavior |
 | Computer Use | Separately configured integration | Browser or desktop control in an isolated environment |
-| Context Manager | Session management + memory | ECC 2.0 session lifecycle |
+| Context Manager | Session management + memory | HyperCraft 2.0 session lifecycle |
 | Task Queue | Memory-persisted task list | TodoWrite + memory files |
 
 ## Setup Guide
 
 ### Step 1: Configure MCP Servers
 
-Memory MCP is optional. The [MCP reference memory server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) is published as `@modelcontextprotocol/server-memory`; version `2026.8.31` was verified on the public npm registry on 2026-09-07. It is a reference implementation, not an ECC-bundled service.
+Memory MCP is optional. The [MCP reference memory server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) is published as `@modelcontextprotocol/server-memory`; version `2026.8.31` was verified on the public npm registry on 2026-09-07. It is a reference implementation, not an HyperCraft-bundled service.
 
 After reviewing that package and approving its use, merge this entry into the user-scoped MCP configuration in `~/.claude.json`, preserving existing settings. Replace `MEMORY_FILE_PATH` with an absolute path in a private directory you own. See [Claude Code MCP configuration](https://code.claude.com/docs/en/mcp) for CLI registration and Windows `cmd /c npx` configuration.
 

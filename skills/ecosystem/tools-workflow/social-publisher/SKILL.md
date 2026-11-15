@@ -2,7 +2,7 @@
 name: social-publisher
 description: Agent-driven scheduling and publishing of social media posts across 13 platforms via SocialClaw. Use when the user wants to publish to X, LinkedIn, Instagram, Facebook Pages, TikTok, Discord, Telegram, YouTube, Reddit, WordPress, or Pinterest — or when managing campaigns, uploading media, or monitoring post delivery status.
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -79,7 +79,7 @@ For OpenClaw users who have already approved TweetClaw in their dependency polic
 openclaw plugins install npm:@xquik/tweetclaw@1.6.31
 ```
 
-Use it for public tweet search, reply search, follower export, user lookup, media review, monitors, or giveaway evidence. Keep the output as research input for `schedule.json`; SocialClaw remains responsible for validation, scheduling, publishing, and delivery status. Store TweetClaw credentials in its plugin config, not in `SC_API_KEY`, schedule files, or campaign assets. Do not install it as a default ECC or SocialClaw dependency.
+Use it for public tweet search, reply search, follower export, user lookup, media review, monitors, or giveaway evidence. Keep the output as research input for `schedule.json`; SocialClaw remains responsible for validation, scheduling, publishing, and delivery status. Store TweetClaw credentials in its plugin config, not in `SC_API_KEY`, schedule files, or campaign assets. Do not install it as a default HyperCraft or SocialClaw dependency.
 
 ### 4. Validate before publishing
 ```bash

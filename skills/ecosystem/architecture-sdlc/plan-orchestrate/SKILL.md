@@ -1,6 +1,6 @@
 ---
 name: plan-orchestrate
-description: Read a plan document, decompose it into steps, classify each step, and emit the ready-to-paste ECC slash command for that step, carrying the step identifier and scope in the command's own documented argument form. Generative only — never invokes commands itself and never claims to control what a command runs internally. Steps whose command cannot carry plan scope fail closed instead of being emitted. Use when the user has a multi-step plan and wants the right command for each step without picking it by hand.
+description: Read a plan document, decompose it into steps, classify each step, and emit the ready-to-paste HyperCraft slash command for that step, carrying the step identifier and scope in the command's own documented argument form. Generative only — never invokes commands itself and never claims to control what a command runs internally. Steps whose command cannot carry plan scope fail closed instead of being emitted. Use when the user has a multi-step plan and wants the right command for each step without picking it by hand.
 metadata:
   origin: HyperCraft Core Distribution
 
@@ -11,7 +11,7 @@ metadata:
 
 # Plan Orchestrate
 
-Bridge a plan document to the current ECC slash-command surface by emitting one ready-to-paste command per step. This skill is a router only: it picks the command and fills in the command's own documented argument form. It does not compose agent chains and does not influence what a command runs internally — each command owns its own execution behavior. The skill is generative only; it never executes commands. The user pastes each line when ready.
+Bridge a plan document to the current HyperCraft slash-command surface by emitting one ready-to-paste command per step. This skill is a router only: it picks the command and fills in the command's own documented argument form. It does not compose agent chains and does not influence what a command runs internally — each command owns its own execution behavior. The skill is generative only; it never executes commands. The user pastes each line when ready.
 
 ## When to Use
 

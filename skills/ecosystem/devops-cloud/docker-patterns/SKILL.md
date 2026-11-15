@@ -311,7 +311,7 @@ Do not claim that a Linux container validates macOS or Windows behavior.
   `plugin`, and `shell` modes.
 - Use argument arrays or `spawnSync(..., { shell: false })` for cross-platform runners. Never interpolate project paths into a shell command.
 
-### Exercise the ECC Plugin Setup Harness
+### Exercise the HyperCraft Plugin Setup Harness
 
 Use `docker/plugin-setup/compose.yaml` as the reference implementation. It provides:
 

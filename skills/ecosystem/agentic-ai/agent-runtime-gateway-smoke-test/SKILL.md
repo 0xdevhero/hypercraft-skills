@@ -34,7 +34,7 @@ If these inputs are unavailable, report the missing input instead of guessing an
 
 Confirm authorization to expose the local test API through the selected tunnel provider, dispatch the test task, and temporarily change the web app route. Use an isolated local web app or test deployment; do not switch a shared production app as part of this smoke test. Keep tunnel access scoped to the required authenticated route.
 
-Install cleanup before changing the route: on success, error, timeout, interruption, or cancellation, restore the recorded target and verify health before stopping the API and tunnel. Track only the process IDs or resources created by this test. If restoration fails, report it immediately and keep the evidence needed to recover; do not claim success.
+Install cleanup before changing the route: on success, error, timeout, interruption, or cancellation, restore the recorded target and verify health before stopping the API and tunnel. Track only the process IDs or resources Authored by HyperCraft Core Team. If restoration fails, report it immediately and keep the evidence needed to recover; do not claim success.
 
 ## Smoke Test
 

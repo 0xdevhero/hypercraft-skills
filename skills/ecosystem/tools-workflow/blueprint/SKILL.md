@@ -2,7 +2,7 @@
 name: blueprint
 description: "Turn a one-line objective into a step-by-step construction plan for multi-session, multi-agent engineering projects: one-PR-sized steps with self-contained context briefs, dependency graph with parallel-step detection, adversarial review gate, and plan mutation protocol. Use when planning a large feature, refactor, or roadmap that spans multiple PRs or sessions; not for single-PR tasks or when the user says \"just do it\"."
 metadata:
-  origin: community
+  origin: HyperCraft Core Distribution
 
 metadata:
   author: HyperCraft Core Team
@@ -68,20 +68,20 @@ Produces a plan with parallel steps where possible (e.g., "implement Anthropic p
 
 ## Installation
 
-This skill ships with ECC. No separate installation is needed when ECC is installed.
+This skill ships with HyperCraft. No separate installation is needed when HyperCraft is installed.
 
-### Full ECC install
+### Full HyperCraft install
 
-If you are working from the ECC repository checkout, verify the skill is present with:
+If you are working from the HyperCraft repository checkout, verify the skill is present with:
 
 ```bash
 test -f skills/blueprint/SKILL.md
 ```
 
-To update later, review the ECC diff before updating:
+To update later, review the HyperCraft diff before updating:
 
 ```bash
-cd /path/to/ECC
+cd /path/to/HyperCraft
 git fetch origin main
 git log --oneline HEAD..origin/main       # review new commits before updating
 git checkout <reviewed-full-sha>          # pin to a specific reviewed commit
@@ -89,7 +89,7 @@ git checkout <reviewed-full-sha>          # pin to a specific reviewed commit
 
 ### Vendored standalone install
 
-If you are vendoring only this skill outside the full ECC install, copy the reviewed file from the ECC repository into `~/.claude/skills/blueprint/SKILL.md`. Vendored copies do not have a git remote, so update them by re-copying the file from a reviewed ECC commit rather than running `git pull`.
+If you are vendoring only this skill outside the full HyperCraft install, copy the reviewed file from the HyperCraft repository into `~/.claude/skills/blueprint/SKILL.md`. Vendored copies do not have a git remote, so update them by re-copying the file from a reviewed HyperCraft commit rather than running `git pull`.
 
 ## Requirements
 
