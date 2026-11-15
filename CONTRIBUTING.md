@@ -41,9 +41,9 @@ This project adheres to the [Contributor Covenant](CODE_OF_CONDUCT.md). By parti
 2. Verify that all markdown frontmatters are valid and JSON files pass syntax validation.
 3. Test python scripts locally:
    ```bash
-   python skills/hyper-ui-intelligence/scripts/search.py "test query" --domain color
+   python skills/core/hyper-ui-intelligence/scripts/search.py "test query" --domain color
    ```
-4. Follow [Conventional Commits](skills/hyper-ship/SKILL.md) for all commit messages:
+4. Follow [Conventional Commits](skills/core/hyper-ship/SKILL.md) for all commit messages:
    ```bash
    git commit -m "feat(security): add CSRF token rotation defense to hyper-security"
    ```

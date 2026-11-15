@@ -63,8 +63,8 @@ jobs:
 
       - name: Test UI Intelligence Script Execution
         run: |
-          python skills/hyper-ui-intelligence/scripts/search.py "fintech dashboard" --domain color
-          python skills/hyper-ui-intelligence/scripts/search.py "glassmorphism" --domain style
+          python skills/core/hyper-ui-intelligence/scripts/search.py "fintech dashboard" --domain color
+          python skills/core/hyper-ui-intelligence/scripts/search.py "glassmorphism" --domain style
 
       - name: Test Skill Intelligence Search Engine
         run: |
