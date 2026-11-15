@@ -12,6 +12,13 @@
 
 ---
 
+## 📖 Operational Architecture & Guide
+
+For a full technical walkthrough explaining how the Core 10, Trading Suite, and On-Disk Search engine work together:
+👉 **[Read the Complete How It Works Guide (docs/HOW_IT_WORKS.md)](docs/HOW_IT_WORKS.md)**
+
+---
+
 ## 🏛️ The Architecture: Ultimate Hybrid Structure
 
 Loading 400+ skills simultaneously in an AI agent typically triggers **token exhaustion** (consuming 25,000+ tokens per prompt) and **attention dilution** (where agents hallucinate or choose incorrect tools).
