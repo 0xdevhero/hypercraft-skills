@@ -80,12 +80,10 @@ class TestDirectorySymlinkFixture:
 
 class TestSafeSandboxDirectory:
     def test_empty_id_cannot_delete_the_shared_base(self) -> None:
-        with (
-            patch("scripts.runner.Path.exists", return_value=True),
-            patch("scripts.runner.shutil.rmtree") as remove,
-            patch("scripts.runner.Path.mkdir") as mkdir,
-            patch("scripts.runner.subprocess.run") as execute,
-        ):
+        with patch("scripts.runner.Path.exists", return_value=True), \
+             patch("scripts.runner.shutil.rmtree") as remove, \
+             patch("scripts.runner.Path.mkdir") as mkdir, \
+             patch("scripts.runner.subprocess.run") as execute:
             execute.return_value = subprocess.CompletedProcess([], 0, stdout="", stderr="")
             with pytest.raises(ValueError, match="sandbox"):
                 run_scenario(_FakeScenario(id=""))

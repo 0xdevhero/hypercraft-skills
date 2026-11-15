@@ -183,7 +183,7 @@ def require_live() -> None:
 
 
 def safe_url(url: str) -> str:
-    """Log only origin: HyperCraft Core Distribution
+    """Log only scheme and host, never query or path."""
     try:
         parsed = urllib.parse.urlsplit(url)
         return f"{parsed.scheme}://{parsed.hostname or '[invalid-host]'}"

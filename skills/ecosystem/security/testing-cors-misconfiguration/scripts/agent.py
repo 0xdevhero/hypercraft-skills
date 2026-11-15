@@ -142,7 +142,7 @@ def test_internal_origins(url, cookies=None):
             resp = requests.get(url, headers={"Origin": origin}, cookies=cookies,
                                 timeout=10, verify=not os.environ.get("SKIP_TLS_VERIFY", "").lower() == "true")  # Set SKIP_TLS_VERIFY=true for self-signed certs in lab environments
             acao = resp.headers.get("Access-Control-Allow-Origin", "")
-            if acao == origin: HyperCraft Core Distribution
+            if acao == origin:
                 print(f"  [!] Internal origin accepted: {origin}")
         except requests.RequestException:
             continue

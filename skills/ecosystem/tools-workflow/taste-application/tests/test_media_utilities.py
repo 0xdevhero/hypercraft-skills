@@ -254,10 +254,8 @@ class MediaUtilitiesTests(unittest.TestCase):
             )
             self.assertEqual(renderer.call_args.kwargs["fps"], 24)
             self.assertTrue(renderer.call_args.kwargs["overwrite"])
-        with (
-            patch.object(capcut, "read_concat", return_value=["source.mp4"]),
-            patch.object(capcut, "export_draft") as exporter,
-        ):
+        with patch.object(capcut, "read_concat", return_value=["source.mp4"]), \
+             patch.object(capcut, "export_draft") as exporter:
             capcut.main(
                 [
                     "list.txt",
@@ -315,10 +313,8 @@ class MediaUtilitiesTests(unittest.TestCase):
                     glitch.render(**params)
             with self.assertRaises(FileNotFoundError):
                 glitch.render(source / "missing", 0, 1, "out.mp4", 42)
-        with (
-            patch.object(glitch, "render", return_value=12) as renderer,
-            patch("builtins.print"),
-        ):
+        with patch.object(glitch, "render", return_value=12) as renderer, \
+             patch("builtins.print"):
             glitch.main(
                 ["source.mp4", "1", ".5", "out.mp4", "42", "mosh", "--fps", "24"]
             )

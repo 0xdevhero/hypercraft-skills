@@ -12,35 +12,36 @@ Most AI coding setups suffer from two failure modes:
 
 HyperCraft eliminates this with a **Two-Tier Hybrid Architecture**:
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│                        USER / OPERATOR PROMPT                          │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│            TIER 1: THE CORE 10 MASTER PACKS (< 500 Tokens)             │
-│   Always loaded in system context. Guides universal SDLC workflows.   │
-│   [Plan] ──► [Diagram] ──► [UI Craft] ──► [TDD] ──► [Build]            │
-│   [Verify] ──► [Simplify] ──► [Security] ──► [Ship]                    │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                        Need Deep-Domain Rules?
-                        (e.g., Trading, Flutter, Django, K8s)
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│             TIER 2: ON-DISK DYNAMIC RETRIEVAL (0 Tokens)               │
-│   Agent queries `scripts/search-skills.py` in sub-second time.         │
-│   Only relevant Markdown excerpt is read on demand from disk.          │
-│   400+ Specialized Skills across 13 Categorized Ecosystem Packs.       │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│              HUMANIZER QUALITY GATE (`audit-humanizer.py`)             │
-│   Ensures generated prose, docs, and commits are free of AI tells.     │
-└────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    User(["👤 USER / OPERATOR PROMPT"])
+    
+    subgraph T1 ["⚡ TIER 1: THE CORE 10 MASTER PACKS (< 500 Tokens)"]
+        direction TB
+        CoreDesc["Always active in system context • Guides universal SDLC workflows"]
+        CoreLoop["Plan ➔ Diagram ➔ UI Craft ➔ TDD ➔ Build ➔ Verify ➔ Simplify ➔ Security ➔ Ship"]
+        CoreDesc --- CoreLoop
+    end
+    
+    Decision{"Need Deep-Domain Rules?<br/><i>(Trading, Flutter, Django, K8s, etc.)</i>"}
+    
+    subgraph T2 ["🌐 TIER 2: ON-DISK DYNAMIC RETRIEVAL (0 Prompt Tokens)"]
+        direction TB
+        SearchCLI["🔍 Local Search Engine: scripts/search-skills.py"]
+        DomainPacks["382 Specialized Skills across 13 Categorized Ecosystem Packs"]
+        SearchCLI --- DomainPacks
+    end
+    
+    Humanizer["🛡️ HUMANIZER QUALITY GATE: scripts/audit-humanizer.py<br/>Asserts generated prose and docs are free of robotic AI tells"]
+    
+    Output(["🚀 Production-Grade Implementation & Verified Release"])
+
+    User --> T1
+    T1 --> Decision
+    Decision -->|Yes: Query On-Demand in <50ms| T2
+    Decision -->|Standard SDLC Flow| Humanizer
+    T2 --> Humanizer
+    Humanizer --> Output
 ```
 
 ---
