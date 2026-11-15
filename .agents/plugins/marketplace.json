@@ -1,0 +1,9 @@
+﻿{
+  "name": "hypercraft-skills",
+  "displayName": "HyperCraft Autonomous Engineering Suite",
+  "version": "1.0.0",
+  "description": "Unified autonomous engineering suite for AI agents: architectural planning, editorial visuals, design intelligence, anti-slop UI, TDD, incremental builds, doubt-driven verification, clean-code simplification, and production API security.",
+  "category": "developer-tools",
+  "tags": ["architecture", "tdd", "design-system", "security", "anti-slop"],
+  "author": "HyperCraft Core Team"
+}

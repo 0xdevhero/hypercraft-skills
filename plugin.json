@@ -1,0 +1,28 @@
+﻿{
+  "name": "hypercraft-skills",
+  "displayName": "HyperCraft Autonomous Engineering Suite",
+  "version": "1.0.0",
+  "description": "Unified autonomous engineering suite for AI agents: architectural planning, editorial visuals, design intelligence, anti-slop UI, TDD, incremental builds, doubt-driven verification, clean-code simplification, and production API security.",
+  "author": {
+    "name": "HyperCraft Core Team"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "hypercraft",
+    "agent-skills",
+    "engineering",
+    "architecture",
+    "tdd",
+    "design-system",
+    "anti-slop",
+    "api-security",
+    "owasp",
+    "code-quality"
+  ],
+  "suggestedPrompts": [
+    "Plan a new feature using hyper-plan with a structured capability map and task breakdown",
+    "Create a publication-grade system architecture diagram with hyper-diagram",
+    "Design a modern dark-mode dashboard UI without AI slop using hyper-ui-craft",
+    "Audit and harden our backend API endpoints against OWASP Top 10 using hyper-security"
+  ]
+}
