@@ -71,18 +71,18 @@ A production-grade algorithmic and quantitative trading suite for AI agents:
 
 HyperCraft categorizes specialized skills across 12 engineering disciplines:
 
-- **`languages/`** — Python, Go, Rust, Dart/Flutter, Swift, Kotlin, C++, C#, Modern Perl.
-- **`frameworks/`** — React 19, Next.js App Router, Vue 3, Nuxt 4, Laravel, Django, Spring Boot, NestJS, Ktor.
-- **`databases/`** — PostgreSQL, MySQL, Redis, ClickHouse, BigQuery, JPA/Hibernate.
-- **`devops-cloud/`** — Docker, Kubernetes, CI/CD pipelines, Uncloud, Cisco IOS, Homelab.
-- **`security/`** — Deep Auth, BOLA, JWT, CORS, Rate-Limiting, HIPAA compliance.
-- **`multimedia-3d/`** — Three.js WebGL, GSAP, Framer Motion, Spline 3D, Remotion, Manim.
-- **`agentic-ai/`** — Autonomous loops, DevFleet, DMUX multi-agent worktrees, agent harnesses.
-- **`science-bio/`** — PubChem, ChEMBL, AlphaFold, ClinVar, GTEx, NCBI sequence pipelines.
-- **`testing-qa/`** — Playwright E2E, Windows native desktop UI automation, CodeScene Code Health.
-- **`architecture-sdlc/`** — Clean Architecture, Hexagonal patterns, API contracts, ADRs.
-- **`frontend-ui/`** — Accessible components, Tailwindcss-motion, React Bits dynamic canvases.
-- **`tools-workflow/`** — Git workflows, Jira integration, conventional commits, cost tracking.
+- **`languages/`**: Python, Go, Rust, Dart/Flutter, Swift, Kotlin, C++, C#, Modern Perl.
+- **`frameworks/`**: React 19, Next.js App Router, Vue 3, Nuxt 4, Laravel, Django, Spring Boot, NestJS, Ktor.
+- **`databases/`**: PostgreSQL, MySQL, Redis, ClickHouse, BigQuery, JPA/Hibernate.
+- **`devops-cloud/`**: Docker, Kubernetes, CI/CD pipelines, Uncloud, Cisco IOS, Homelab.
+- **`security/`**: Deep Auth, BOLA, JWT, CORS, Rate-Limiting, HIPAA compliance.
+- **`multimedia-3d/`**: Three.js WebGL, GSAP, Framer Motion, Spline 3D, Remotion, Manim.
+- **`agentic-ai/`**: Autonomous loops, DevFleet, DMUX multi-agent worktrees, agent harnesses.
+- **`science-bio/`**: PubChem, ChEMBL, AlphaFold, ClinVar, GTEx, NCBI sequence pipelines.
+- **`testing-qa/`**: Playwright E2E, Windows native desktop UI automation, CodeScene Code Health.
+- **`architecture-sdlc/`**: Clean Architecture, Hexagonal patterns, API contracts, ADRs.
+- **`frontend-ui/`**: Accessible components, Tailwindcss-motion, React Bits dynamic canvases.
+- **`tools-workflow/`**: Git workflows, Jira integration, conventional commits, cost tracking.
 
 ---
 
