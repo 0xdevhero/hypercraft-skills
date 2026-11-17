@@ -1,6 +1,7 @@
-# GitHub Sponsors Configuration for HyperCraft
+# GitHub Sponsors & Community Funding Configuration
 # Enables the official GitHub "Sponsor" button on https://github.com/0xdevhero/hypercraft-skills
 
 github: [0xdevhero]
+buy_me_a_coffee: hrhero
 custom:
-  - https://github.com/sponsors/0xdevhero
+  - https://www.buymeacoffee.com/hrhero
