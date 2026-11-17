@@ -1,0 +1,6 @@
+# GitHub Sponsors Configuration for HyperCraft
+# Enables the official GitHub "Sponsor" button on https://github.com/0xdevhero/hypercraft-skills
+
+github: [0xdevhero]
+custom:
+  - https://github.com/sponsors/0xdevhero

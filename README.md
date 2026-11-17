@@ -9,6 +9,7 @@
 [![Token Savings: 98%](https://img.shields.io/badge/Token_Savings-98%25_Less_Context-blue.svg)](#-why-hypercraft-the-token-crisis-solved)
 [![Trading: Quant & SMC](https://img.shields.io/badge/Trading-Quant_%26_SMC_Suite-gold.svg)](#-trading--quant-suite-skillsecosystemtrading)
 [![Agents: 76 Specialists](https://img.shields.io/badge/Agents-76_Specialist_Personas-orange.svg)](#-specialized-agent-roster-agents)
+[![Sponsor: 0xdevhero](https://img.shields.io/badge/Sponsor-%E2%9D%A4-ff69b4.svg)](https://github.com/sponsors/0xdevhero)
 [![Platforms](https://img.shields.io/badge/Platforms-Antigravity%20%7C%20Claude%20Code%20%7C%20Cursor%20%7C%20Codex-blueviolet.svg)](#-installation--quickstart)
 
 ---
@@ -209,6 +210,17 @@ Add to your project root or workspace rules:
 ```bash
 git submodule add https://github.com/0xdevhero/hypercraft-skills.git .agents/hypercraft
 ```
+
+---
+
+## 💖 Sponsorship & Support
+
+HyperCraft is an open-source initiative providing a zero-token-tax engineering distribution for modern coding agents. If HyperCraft accelerates your daily workflow or helps your engineering team build faster, consider supporting our development:
+
+- **GitHub Sponsors:** [Become a Sponsor](https://github.com/sponsors/0xdevhero)
+- **Feature Bounties and Custom Agent Packs:** Open an issue with the sponsorship label or contact the team.
+
+Your support funds continuous benchmarking, testing against new model releases, and expanding deep-domain ecosystem packs.
 
 ---
 
