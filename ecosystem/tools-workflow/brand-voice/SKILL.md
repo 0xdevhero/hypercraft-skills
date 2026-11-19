@@ -57,9 +57,9 @@ Produce a reusable `VOICE PROFILE` block that downstream skills can consume dire
 
 Keep the profile structured and short enough to reuse in session context. The point is not literary criticism. The point is operational reuse.
 
-## Affaan / HyperCraft Defaults
+## HyperCraft Brand Voice Defaults
 
-If the user wants Affaan / HyperCraft voice and live sources are thin, start here unless newer source material overrides it:
+If the user wants HyperCraft Brand Voice voice and live sources are thin, start here unless newer source material overrides it:
 
 - direct, compressed, concrete
 - specifics, mechanisms, receipts, and numbers beat adjectives

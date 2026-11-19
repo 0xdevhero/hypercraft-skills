@@ -12,25 +12,25 @@ metadata:
 # Unified Memory
 
 Use the HyperCraft Memory Vault as the common context layer between harnesses. The
-vault stores portable `ecc.memory.v1` Markdown documents rather than
+vault stores portable `hypercraft.memory.v1` Markdown documents rather than
 harness-specific transcripts or inboxes.
 
 ## Runtime Prerequisite
 
 This skill is guidance, not the Memory Vault executable. Skill-only, minimal,
 manual, and Claude plugin installs do not create the required commands on
-`PATH`. Install the `ecc-universal` npm runtime separately before using the CLI
+`PATH`. Install the `hypercraft-suite` npm runtime separately before using the CLI
 or MCP examples:
 
 ```bash
-npm install -g ecc-universal
-ecc memory --help
-command -v ecc-memory-mcp
+npm install -g hypercraft-suite
+hypercraft memory --help
+command -v hypercraft-memory-mcp
 ```
 
 A repository checkout may instead run the CLI as
-`node scripts/ecc.js memory ...`, but MCP configurations that name
-`ecc-memory-mcp` still require that binary on `PATH`.
+`node scripts/hypercraft.js memory ...`, but MCP configurations that name
+`hypercraft-memory-mcp` still require that binary on `PATH`.
 
 ## When To Use
 
@@ -47,9 +47,9 @@ substitute for governed project documentation.
 
 | Scope | Location | Use |
 |---|---|---|
-| `project` | `<repo>/.ecc/memory/project/` | Repo-local context protected by a fail-closed `.gitignore` |
-| `team` | `<repo>/.ecc/memory/team/` | Context intended for human review and version-controlled sharing |
-| `user` | `~/.ecc/memory/` | Operator context that follows the user across repositories |
+| `project` | `<repo>/.hypercraft/memory/project/` | Repo-local context protected by a fail-closed `.gitignore` |
+| `team` | `<repo>/.hypercraft/memory/team/` | Context intended for human review and version-controlled sharing |
+| `user` | `~/.hypercraft/memory/` | Operator context that follows the user across repositories |
 
 All participating harnesses must use the same repository working directory or
 the same `ECC_MEMORY_PROJECT_ROOT` and `ECC_MEMORY_USER_ROOT` overrides.
@@ -66,8 +66,8 @@ exists with unexpected content.
 Search for an existing memory before creating another copy:
 
 ```bash
-ecc memory search "authentication migration" --target-harness codex
-ecc memory read <memory-id>
+hypercraft memory search "authentication migration" --target-harness codex
+hypercraft memory read <memory-id>
 ```
 
 With the opt-in MCP server, use `memory_search` and `memory_read`.
@@ -113,7 +113,7 @@ process list:
 
 ```bash
 printf '%s\n' 'The migration tests pass; rollout is still pending.' |
-  ecc memory save \
+  hypercraft memory save \
     --title "Authentication migration status" \
     --kind context \
     --source-harness codex \
@@ -132,7 +132,7 @@ governed project artifact rather than changing memory frontmatter.
 Write a handoff when another harness should continue the task:
 
 ```bash
-ecc memory handoff \
+hypercraft memory handoff \
   --from codex \
   --target claude \
   --title "Finish authentication rollout" \
@@ -154,7 +154,7 @@ overwriting history.
 Run this before committing team memories or after resolving a handoff:
 
 ```bash
-ecc memory doctor
+hypercraft memory doctor
 ```
 
 Repair reported files manually. The doctor does not delete or rewrite memory.
@@ -177,13 +177,13 @@ Repair reported files manually. The doctor does not delete or rewrite memory.
 ## MCP Setup
 
 The stdio server is optional and is not enabled by HyperCraft's default `.mcp.json`.
-After installing HyperCraft, copy the `ecc-memory-vault` entry from
+After installing HyperCraft, copy the `hypercraft-memory-vault` entry from
 `mcp-configs/mcp-servers.json` into each harness where tool access is useful.
 Replace its placeholder with a lowercase server identity. The server command
 is:
 
 ```text
-ECC_MEMORY_HARNESS=codex ecc-memory-mcp
+ECC_MEMORY_HARNESS=codex hypercraft-memory-mcp
 ```
 
 The MCP process binds writes and target filtering to

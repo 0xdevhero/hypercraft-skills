@@ -14,14 +14,14 @@ the qualified Nasiko CLI. This skill does not operate a Nasiko control plane.
 
 ## Safety contract
 
-- Begin with `ecc nasiko status --json`. Status is read-only.
+- Begin with `hypercraft nasiko status --json`. Status is read-only.
 - Installation always requires explicit user consent and `--yes`.
 - Install only an HyperCraft-qualified pinned version, currently `v0.1.0`.
-- Preview first with `ecc nasiko install --version v0.1.0 --dry-run --json`.
-- Install with `ecc nasiko install --version v0.1.0 --yes --json` only after the
+- Preview first with `hypercraft nasiko install --version v0.1.0 --dry-run --json`.
+- Install with `hypercraft nasiko install --version v0.1.0 --yes --json` only after the
   user reviews the version, registry origin, digest, and destination.
 - Remove only a still-qualified HyperCraft-managed binary with
-  `ecc nasiko uninstall --version v0.1.0 --yes --json`. Preview removal with
+  `hypercraft nasiko uninstall --version v0.1.0 --yes --json`. Preview removal with
   `--dry-run` first.
 - The qualified source is `https://github.com/Nasiko-Labs/nasiko`, licensed
   under Apache-2.0; artifact and extracted-binary SHA-256 values are pinned.

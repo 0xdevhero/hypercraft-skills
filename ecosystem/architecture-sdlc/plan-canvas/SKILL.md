@@ -34,7 +34,7 @@ remote URLs. The canvas serves local artifact files only.
 
 ## How It Works
 
-Invoke the CLI as `ecc-plan-canvas` — the bin shipped by the `ecc-universal`
+Invoke the CLI as `plan-canvas` — the bin shipped by the `hypercraft-suite`
 package (on PATH after a global/plugin install; `node "$CLAUDE_PLUGIN_ROOT/scripts/plan-canvas.js"`
 also works for plugin installs). Run it from the project you are reviewing in;
 it works from any working directory. It manages a detached loopback server
@@ -45,15 +45,15 @@ The workflow is a plain CLI-plus-JSON loop, so it is model- and harness-agnostic
 any agent that can run a shell command and read stdout drives it the same way
 (Claude Code, Codex, Cursor, Gemini, OpenCode, Copilot). Trigger it however your
 harness surfaces skills — e.g. `/plan-canvas` in Claude Code, `$plan-canvas` in
-Codex — or just run the `ecc-plan-canvas` commands directly.
+Codex — or just run the `plan-canvas` commands directly.
 
 ```bash
 # 1. Open the artifact in the user's browser (returns immediately)
-ecc-plan-canvas open .claude/plans/feature.plan.md
+plan-canvas open .claude/plans/feature.plan.md
 
 # 2. Block until the human responds. Leave running; re-run if interrupted:
 #    queued feedback is never lost.
-ecc-plan-canvas await .claude/plans/feature.plan.md
+plan-canvas await .claude/plans/feature.plan.md
 ```
 
 ### Stay listening, or the human talks to an empty chair
@@ -70,7 +70,7 @@ works too, but only until the harness time-limits it.
 
 Two backstops exist, and neither is an excuse to skip the above:
 
-- `ecc-plan-canvas pending` lists feedback queued with no listener. Check it
+- `plan-canvas pending` lists feedback queued with no listener. Check it
   whenever you are unsure whether you missed something.
 - The `stop:plan-canvas-pending` hook blocks your turn from ending while canvas
   feedback is undelivered, and hands you the messages. If you are reading
@@ -100,7 +100,7 @@ Two backstops exist, and neither is an excuse to skip the above:
 **3. Always respond in the canvas**, then keep listening. One command does both:
 
 ```bash
-ecc-plan-canvas await <file> --reply "Split Phase 2 as requested. Take a look."
+plan-canvas await <file> --reply "Split Phase 2 as requested. Take a look."
 ```
 
 Every human message gets a reply in the canvas, even a one-liner like
@@ -112,9 +112,9 @@ While you work, keep the chat honest with the activity indicator:
 
 ```bash
 # animated "agent is thinking..." bubble; refresh it during long work
-ecc-plan-canvas typing <file> --state thinking
+plan-canvas typing <file> --state thinking
 # switch to "agent is typing..." just before a reply lands
-ecc-plan-canvas typing <file> --state typing
+plan-canvas typing <file> --state typing
 ```
 
 `await` sets `thinking` for you the moment it hands you a batch, and `--reply`
@@ -122,7 +122,7 @@ clears it. Both states self-expire, so a crashed agent decays to an honest
 "queued" instead of leaving the human watching dots forever. Refresh `thinking`
 if a revision takes more than a minute.
 
-**4. End** when review concludes: `ecc-plan-canvas end <file>`.
+**4. End** when review concludes: `plan-canvas end <file>`.
 
 ## Diagrams (Mermaid)
 
@@ -169,10 +169,10 @@ mirror at `ECC_PLAN_CANVAS_MERMAID_URL` for air-gapped use.
 `.claude/plans/notifications.plan.md` and must WAIT for confirmation:
 
 ```bash
-ecc-plan-canvas open .claude/plans/notifications.plan.md
-ecc-plan-canvas await .claude/plans/notifications.plan.md
+plan-canvas open .claude/plans/notifications.plan.md
+plan-canvas await .claude/plans/notifications.plan.md
 # → {"status":"feedback","items":[{"kind":"verdict","verdict":"approve"}]}
-ecc-plan-canvas end .claude/plans/notifications.plan.md
+plan-canvas end .claude/plans/notifications.plan.md
 # plan is confirmed — begin implementation
 ```
 
@@ -180,7 +180,7 @@ ecc-plan-canvas end .claude/plans/notifications.plan.md
 
 ```bash
 # await returned annotations → edit the .plan.md (canvas live-reloads)
-ecc-plan-canvas await <file> --reply "Reworked the risk table."
+plan-canvas await <file> --reply "Reworked the risk table."
 # → blocks again until the next response
 ```
 

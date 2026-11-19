@@ -335,11 +335,11 @@ docker compose -f docker/plugin-setup/compose.yaml \
 Run the safe default flow in each image:
 
 ```bash
-docker compose -p ecc-plugin-debian-test \
+docker compose -p hypercraft-plugin-debian-test \
   -f docker/plugin-setup/compose.yaml \
   run --rm -T real-cli dry-run
 
-docker compose -p ecc-plugin-ubuntu-test \
+docker compose -p hypercraft-plugin-ubuntu-test \
   -f docker/plugin-setup/compose.yaml \
   run --rm -T real-cli-ubuntu dry-run
 ```
@@ -347,14 +347,14 @@ docker compose -p ecc-plugin-ubuntu-test \
 The dry run executes the current public command contract:
 
 ```bash
-ecc install --profile core --target claude-project --dry-run --json
+hypercraft install --profile core --target claude-project --dry-run --json
 ```
 
 Before that command runs, the container creates a locally packed npm artifact
 from the read-only checkout with `npm pack --ignore-scripts`. It extracts the
-self-created tarball under `/tmp`, validates the `ecc-universal` package name,
-required install manifests, and the confined `package.json` `bin.ecc` mapping,
-then invokes the extracted `ecc` executable. The runtime stays on
+self-created tarball under `/tmp`, validates the `hypercraft-suite` package name,
+required install manifests, and the confined `package.json` `bin.hypercraft` mapping,
+then invokes the extracted `hypercraft` executable. The runtime stays on
 `network_mode: none`, does not execute package lifecycle scripts, and does not
 rely on host `node_modules`; its exact pinned production dependencies are
 already present in the image.
@@ -370,9 +370,9 @@ Start a detached container without `--rm` so leaving a terminal does not remove
 the session:
 
 ```bash
-docker compose -p ecc-plugin-session \
+docker compose -p hypercraft-plugin-session \
   -f docker/plugin-setup/compose.yaml \
-  run --detach --name ecc-plugin-shell real-cli shell
+  run --detach --name hypercraft-plugin-shell real-cli shell
 ```
 
 The container copies the read-only fixture to the stable private directory
@@ -380,9 +380,9 @@ The container copies the read-only fixture to the stable private directory
 terminal-opener v1 data contract:
 
 ```bash
-docker inspect --format '{{.State.Running}}' ecc-plugin-shell
+docker inspect --format '{{.State.Running}}' hypercraft-plugin-shell
 node docker/plugin-setup/interactive-plan.js \
-  --container ecc-plugin-shell \
+  --container hypercraft-plugin-shell \
   --workdir /workspace/project \
   --json \
   -- bash
@@ -396,7 +396,7 @@ terminal adapter, interpolate a shell command, or manage a host GUI process.
 Until then, open the same PTY in the current host terminal directly:
 
 ```bash
-docker exec -it -w /workspace/project ecc-plugin-shell bash
+docker exec -it -w /workspace/project hypercraft-plugin-shell bash
 ```
 
 Exit the shell without stopping the detached container. Reconnect with the
@@ -404,8 +404,8 @@ same `docker exec -it` command. When finished, remove the exact named container
 and its Compose project resources:
 
 ```bash
-docker rm --force ecc-plugin-shell
-docker compose -p ecc-plugin-session \
+docker rm --force hypercraft-plugin-shell
+docker compose -p hypercraft-plugin-session \
   -f docker/plugin-setup/compose.yaml \
   down --remove-orphans
 ```
@@ -435,14 +435,14 @@ logging in:
 (
   set -e
   npm install --global @openai/codex@0.162.0   # the harness image does not ship codex
-  node /ecc/docker/plugin-setup/codex-auth-relay.js &
+  node /hypercraft/docker/plugin-setup/codex-auth-relay.js &
   relay_pid=$!
   trap 'kill "$relay_pid" 2>/dev/null || true; wait "$relay_pid" 2>/dev/null || true' EXIT
   codex login
 )
 ```
 
-The networked service sets `NPM_CONFIG_PREFIX=/tmp/ecc-npm` and adds its `bin`
+The networked service sets `NPM_CONFIG_PREFIX=/tmp/hypercraft-npm` and adds its `bin`
 directory to `PATH`. This keeps the pinned installation writable for UID 1000
 on the executable `/tmp` mount while the root filesystem remains read-only.
 
@@ -468,15 +468,15 @@ npm run test:plugin-setup-platform
 Inspect the produced identity and environment before trusting the image:
 
 ```bash
-docker image inspect ecc-plugin-setup:debian ecc-plugin-setup:ubuntu
+docker image inspect hypercraft-plugin-setup:debian hypercraft-plugin-setup:ubuntu
 ```
 
 Clean each named test project without deleting unrelated volumes or images:
 
 ```bash
-docker compose -p ecc-plugin-debian-test \
+docker compose -p hypercraft-plugin-debian-test \
   -f docker/plugin-setup/compose.yaml down --remove-orphans
-docker compose -p ecc-plugin-ubuntu-test \
+docker compose -p hypercraft-plugin-ubuntu-test \
   -f docker/plugin-setup/compose.yaml down --remove-orphans
 ```
 

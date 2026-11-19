@@ -32,25 +32,25 @@ Set `ECC_ITO_CLI_EXECUTABLE` to the explicit absolute built entry:
 ```
 
 HyperCraft never discovers this credential-bearing client through `PATH`.
-`ecc ito login` performs device authorization and never inherits `ITO_API_KEY`.
+`hypercraft ito login` performs device authorization and never inherits `ITO_API_KEY`.
 The validation-only `auth`, plus `find` and `status`, forward `ITO_API_KEY`
 directly when configured; `ITO_AUTH_MODE=legacy` is not required. Never put a
 key or token in arguments, tracked files, MCP results, logs, or chat.
 
 ## CLI workflow
 
-1. Run `ecc ito login` before the first operation. HyperCraft delegates this to the
+1. Run `hypercraft ito login` before the first operation. HyperCraft delegates this to the
    canonical CLI's device authorization, which opens the Itô verification page
    by default and persists a device token in macOS Keychain. Use
-   `ecc ito login --no-browser` to suppress the page handoff. HyperCraft itself does no
+   `hypercraft ito login --no-browser` to suppress the page handoff. HyperCraft itself does no
    browser automation. If the originating agent cannot complete the signed-in
    browser step, hand the exact command to the user; after approval finishes,
-   return to the originating task and continue with `ecc ito auth`.
+   return to the originating task and continue with `hypercraft ito auth`.
    Device tokens use macOS Keychain by default. File-token fallback is explicit
    and its directory and token file must remain owner-only (0700 and 0600).
-2. Run `ecc ito auth` to validate existing credentials; it never starts login
+2. Run `hypercraft ito auth` to validate existing credentials; it never starts login
    and rejects `--no-browser`.
-3. Before `ecc ito find`, obtain explicit buyer authority to submit an RFQ.
+3. Before `hypercraft ito find`, obtain explicit buyer authority to submit an RFQ.
    - Require `gpu`, `count`, whole `days`, `max-rate`, `nodes`,
      `gpus-per-node`, `storage-tb`, `start-window`, `form-factor`,
      `contract-type`, `fabric`, `region`, and the split-fill decision.
@@ -60,7 +60,7 @@ key or token in arguments, tracked files, MCP results, logs, or chat.
 4. Run the live RFQ command:
 
    ```sh
-   ecc ito find \
+   hypercraft ito find \
      --gpu h200 \
      --count 8 \
      --nodes 1 \
@@ -75,17 +75,17 @@ key or token in arguments, tracked files, MCP results, logs, or chat.
      --region us-east-1
    ```
 
-5. Run `ecc ito status` to inspect RFQs and procurement orders.
+5. Run `hypercraft ito status` to inspect RFQs and procurement orders.
    After an ambiguous transport failure, check status before repeating `find`.
 6. When a quote is ready and the buyer explicitly approves, accept it:
 
    ```sh
-   ecc ito accept rfq_<ticket-id>
+   hypercraft ito accept rfq_<ticket-id>
    ```
 
    This routes the ticket to the desk for human review. It does not move funds
    or reserve capacity. Do not accept without explicit buyer authority.
-7. Run `ecc ito logout` when the user explicitly asks to revoke this device.
+7. Run `hypercraft ito logout` when the user explicitly asks to revoke this device.
    The canonical CLI keeps the local credential when remote revocation fails so
    the operator can retry; never delete the token manually as a substitute.
 
@@ -94,7 +94,7 @@ as fixed only when the canonical result contains a non-null firm quote.
 
 ## Live node qualification
 
-`ecc ito evals` exposes the canonical CLI's narrow live adapter to a separately
+`hypercraft ito evals` exposes the canonical CLI's narrow live adapter to a separately
 installed `sixtytwo-cli==0.3.33`. It does not expose local fixture execution
 through HyperCraft.
 Require all of the following before invoking it:
@@ -106,7 +106,7 @@ Require all of the following before invoking it:
 - an existing absolute config directory containing `sixtytwo.yaml`.
 
 ```sh
-ecc ito evals \
+hypercraft ito evals \
   --cluster clu_prod_example \
   --live-sixtytwo \
   --nodes gpu-01,gpu-02 \

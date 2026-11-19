@@ -12,8 +12,9 @@ from typing import List, Dict, Tuple, Any
 
 COMMON_UPSTREAM_AUTHORS = [
     r'addyosmani', r'mahipal', r'nutlope', r'cathrynlavery', r'blader',
-    r'affaan[-_]?m', r'AnandChowdhary', r'enitrat', r'Xabilimon1', r'LEC-AI',
-    r'shoyann', r'Keyur Patel', r'Ronald Skelton', r'RapportScore'
+    r'affaan[-_]?m', r'affaan', r'AnandChowdhary', r'enitrat', r'Xabilimon1', r'LEC-AI',
+    r'shoyann', r'Keyur Patel', r'Ronald Skelton', r'RapportScore',
+    r'joaquinhuigomez', r'berkayyalcin7', r'mturac'
 ]
 
 PROMOTIONAL_PATTERNS = [

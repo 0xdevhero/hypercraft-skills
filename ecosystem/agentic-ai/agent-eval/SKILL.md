@@ -148,4 +148,4 @@ judge:
 
 ## Links
 
-- Repository: [github.com/joaquinhuigomez/agent-eval](https://github.com/joaquinhuigomez/agent-eval)
+- Repository: [github.com/0xdevhero/hypercraft-skills](https://github.com/0xdevhero/hypercraft-skills)

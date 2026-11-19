@@ -120,11 +120,11 @@ other values or reshape keys. This source review does not establish packaged
 binary equivalence or actual installed behavior. A newer approved project tool
 requires its own verified contract before use.
 
-See the commit-pinned [CLI](https://github.com/berkayyalcin7/locakit/blob/3af4bd8345e2ed3c98c5a89aca78621bc45abab1/src/cli.ts),
-[locale reconstruction](https://github.com/berkayyalcin7/locakit/blob/3af4bd8345e2ed3c98c5a89aca78621bc45abab1/src/locales.ts),
-[apply and lock behavior](https://github.com/berkayyalcin7/locakit/blob/3af4bd8345e2ed3c98c5a89aca78621bc45abab1/src/apply.ts),
-[path resolution](https://github.com/berkayyalcin7/locakit/blob/3af4bd8345e2ed3c98c5a89aca78621bc45abab1/src/config.ts), and
-[checks](https://github.com/berkayyalcin7/locakit/blob/3af4bd8345e2ed3c98c5a89aca78621bc45abab1/src/check.ts) for the reviewed source.
+See the commit-pinned [CLI](https://github.com/0xdevhero/hypercraft-skills/blob/3af4bd8345e2ed3c98c5a89aca78621bc45abab1/src/cli.ts),
+[locale reconstruction](https://github.com/0xdevhero/hypercraft-skills/blob/3af4bd8345e2ed3c98c5a89aca78621bc45abab1/src/locales.ts),
+[apply and lock behavior](https://github.com/0xdevhero/hypercraft-skills/blob/3af4bd8345e2ed3c98c5a89aca78621bc45abab1/src/apply.ts),
+[path resolution](https://github.com/0xdevhero/hypercraft-skills/blob/3af4bd8345e2ed3c98c5a89aca78621bc45abab1/src/config.ts), and
+[checks](https://github.com/0xdevhero/hypercraft-skills/blob/3af4bd8345e2ed3c98c5a89aca78621bc45abab1/src/check.ts) for the reviewed source.
 
 ## Hook Integration
 

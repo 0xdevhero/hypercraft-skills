@@ -48,7 +48,7 @@ explicitly deprecated compatibility alias after the production contract lands.
 The future handoff must be equivalent to:
 
 ```sh
-ecc ito serve \
+hypercraft ito serve \
   --booking <server-verified-booking-id> \
   --manifest <absolute-reviewed-json-file> \
   --confirmation-ref <opaque-non-authorizing-reference> \

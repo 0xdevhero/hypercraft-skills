@@ -66,7 +66,7 @@ Earlier sources take precedence when names collide: user agents > plugin agents 
 ### Step 1: Discover Available Agents
 
 Run `claude agents` to get the full agent list. Parse each line:
-- **Plugin agents** are prefixed with `plugin-name:` (e.g., `ecc:security-reviewer`). Use the part after `:` as the agent name and the plugin name as the domain.
+- **Plugin agents** are prefixed with `plugin-name:` (e.g., `hypercraft:security-reviewer`). Use the part after `:` as the agent name and the plugin name as the domain.
 - **User agents** have no prefix. Read the corresponding markdown file from `~/.claude/agents/` or `./agents/` to extract the name and description.
 - **Built-in agents** (e.g., `Explore`, `Plan`) are skipped unless the user explicitly asks to include them.
 

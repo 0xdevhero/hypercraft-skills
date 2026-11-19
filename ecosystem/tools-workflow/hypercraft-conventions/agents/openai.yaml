@@ -1,0 +1,7 @@
+interface:
+  display_name: "HyperCraft"
+  short_description: "Repo workflows and conventions for HyperCraft"
+  brand_color: "#0EA5E9"
+  default_prompt: "Use $hypercraft-conventions to follow this repository's conventions and workflows."
+policy:
+  allow_implicit_invocation: true

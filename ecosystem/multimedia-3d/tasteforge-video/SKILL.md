@@ -81,7 +81,7 @@ dry-run/dry_run semantics — say "dry-run spec" or "deterministic plan", never
 
 ## Canonical Implementation
 
-- Repository: `HyperCraft/HyperCraft`; Python distribution `ecc-tasteforge`, package
+- Repository: `HyperCraft/HyperCraft`; Python distribution `hypercraft-tasteforge`, package
   directory `skills/taste-application/scripts/tasteforge/`. Install from the
   extracted HyperCraft package with `python3 -m pip install ./skills/taste-application/scripts`.
   The example project `Ito-Markets/ito-video` pins a specific HyperCraft commit.
@@ -100,7 +100,7 @@ its JSON. Install the packaged engine if absent; do not reconstruct its logic
 inline. `taste.resolve` is a compatibility import of `tasteforge.resolve`, so
 the creative scripts and example project share one verified Resolve adapter.
 
-The `python3 -m tasteforge` CLI uses the installed `ecc-tasteforge` distribution. The standalone `taste-distillation` and `taste-application`
+The `python3 -m tasteforge` CLI uses the installed `hypercraft-tasteforge` distribution. The standalone `taste-distillation` and `taste-application`
 scripts ship in HyperCraft's opt-in media-generation module with their own Python
 requirements. Neither path requires publishing the user's repository or media.
 

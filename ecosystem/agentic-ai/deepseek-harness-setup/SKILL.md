@@ -37,7 +37,7 @@ Run HyperCraft on the DeepSeek Harness. Full guide: `docs/DEEPSEEK-HARNESS-GUIDE
    from the canonical HyperCraft hooks file:
 
    ```bash
-   node scripts/dsh/generate-hooks-config.js --ecc-root /path/to/HyperCraft --out ~/.dsh/ecc/hooks-dsh.json
+   node scripts/dsh/generate-hooks-config.js --suite-root /path/to/HyperCraft --out ~/.dsh/hypercraft/hooks-dsh.json
    ```
 
    The generator lower-cases tool-name matchers, prefixes
@@ -49,7 +49,7 @@ Run HyperCraft on the DeepSeek Harness. Full guide: `docs/DEEPSEEK-HARNESS-GUIDE
 
    ```yaml
    - insert:
-       - id: ecc-hooks-claude-code
+       - id: hypercraft-hooks
          name: "@deepseek-ai/dsh-hooks-claude-code"
          config:
            configPath: /absolute/path/to/hooks-dsh.json
@@ -64,7 +64,7 @@ Run HyperCraft on the DeepSeek Harness. Full guide: `docs/DEEPSEEK-HARNESS-GUIDE
 
    ```bash
    cd ~/.dsh && dsh --profile web --dump-config > /tmp/dump.yml
-   grep ecc-hooks /tmp/dump.yml
+   grep hypercraft-hooks /tmp/dump.yml
    ```
 
    Compose exit status stays 0 even when the loader drops or rejects an

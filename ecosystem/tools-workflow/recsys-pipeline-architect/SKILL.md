@@ -13,7 +13,7 @@ metadata:
 
 A spec-and-scaffold skill for building composable recommendation, ranking, and feed pipelines. It encodes the **six-stage pattern** — Source → Hydrator → Filter → Scorer → Selector → SideEffect — popularized by xAI's open-sourced [For You algorithm](https://github.com/xai-org/x-algorithm) (Apache 2.0). This skill is an independent reimplementation of the pattern (MIT) — no code copied from the original.
 
-Upstream: <https://github.com/mturac/recsys-pipeline-architect>
+Upstream: <https://github.com/0xdevhero/hypercraft-skills>
 
 ## When to Use
 
@@ -105,7 +105,7 @@ Default to isolation. Joint only when there's a specific reason (e.g., explicit 
 
 ## Upstream contents
 
-The upstream repository at <https://github.com/mturac/recsys-pipeline-architect> ships:
+The upstream repository at <https://github.com/0xdevhero/hypercraft-skills> ships:
 
 - Full `SKILL.md` with the complete 8-step workflow
 - 5 load-on-demand reference docs: interfaces in 4 languages (TS/Go/Python/Rust), multi-action scoring pattern, candidate isolation, filter cookbook (12 patterns), scorer cookbook (weighted sum, MMR, diversity penalty, position debiasing)
@@ -116,4 +116,4 @@ The upstream repository at <https://github.com/mturac/recsys-pipeline-architect>
 - v0.1.0 release tagged
 - MIT license; pattern attributed to xAI X For You algorithm (Apache 2.0)
 
-Install via skills.sh: `npx skills add mturac/recsys-pipeline-architect`
+Install via skills.sh: `python scripts/search-skills.py recsys-pipeline`

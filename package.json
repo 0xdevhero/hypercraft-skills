@@ -4,7 +4,7 @@
   "description": "The unified autonomous engineering suite for AI agents",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"HyperCraft skills verified\" && exit 0"
+    "test": "python scripts/lint-skills.py"
   },
   "keywords": [
     "agent-skills",

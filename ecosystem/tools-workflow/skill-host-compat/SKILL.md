@@ -93,7 +93,7 @@ every `skills/` entry to have a Cursor copy.
 
 - Keep canonical `origin: HyperCraft Core Distribution
 - Drop `origin`, `version`, and `argument-hint` on the Codex copy.
-- Show host-portable commands in bash fences (`npx`, `ecc`, or a resolved
+- Show host-portable commands in bash fences (`npx`, `hypercraft`, or a resolved
   root). Rewrite `${CLAUDE_PROJECT_DIR}` in Codex copies to `$(pwd)` or an
   explicit path. Keep valid Claude-scoped forms in canonical instructions; resolve host variables in the target projection.
 - Run this script before `npm test` when the change is a new skill.
