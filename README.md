@@ -10,7 +10,7 @@
 [![Trading: Quant & SMC](https://img.shields.io/badge/Trading-Quant_%26_SMC_Suite-gold.svg)](#-trading--quant-suite-skillsecosystemtrading)
 [![Agents: 76 Specialists](https://img.shields.io/badge/Agents-76_Specialist_Personas-orange.svg)](#-specialized-agent-roster-agents)
 [![Sponsor: 0xdevhero](https://img.shields.io/badge/Sponsor-%E2%9D%A4-ff69b4.svg)](https://github.com/sponsors/0xdevhero)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-hrhero-FFDD00.svg?logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/hrhero)
+[![Patreon](https://img.shields.io/badge/Patreon-MdHussainurRahmanHero-FF424D.svg?logo=patreon&logoColor=white)](https://www.patreon.com/c/MdHussainurRahmanHero)
 [![Platforms](https://img.shields.io/badge/Platforms-Antigravity%20%7C%20Claude%20Code%20%7C%20Cursor%20%7C%20Codex-blueviolet.svg)](#-installation--quickstart)
 
 ---
@@ -218,7 +218,7 @@ git submodule add https://github.com/0xdevhero/hypercraft-skills.git .agents/hyp
 
 HyperCraft is an open-source initiative providing a zero-token-tax engineering distribution for modern coding agents. If HyperCraft accelerates your daily workflow or helps your engineering team build faster, consider supporting our development:
 
-- **Buy Me a Coffee:** [Support hrhero on Buy Me a Coffee](https://www.buymeacoffee.com/hrhero)
+- **Patreon:** [Support on Patreon](https://www.patreon.com/c/MdHussainurRahmanHero)
 - **GitHub Sponsors:** [Become a Sponsor](https://github.com/sponsors/0xdevhero)
 - **Feature Bounties and Custom Agent Packs:** Open an issue with the sponsorship label or contact the team.
 

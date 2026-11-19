@@ -1,0 +1,16 @@
+{
+  "name": "awesome-opus5-5-videos",
+  "version": "1.0.0",
+  "description": "Curated directory of Opus 5.5 AI video prompts and showcase examples",
+  "type": "module",
+  "bin": {
+    "opus-video": "./bin/cli.mjs",
+    "opus5-videos": "./bin/cli.mjs"
+  },
+  "scripts": {
+    "start": "node ./bin/cli.mjs"
+  },
+  "keywords": ["opus5-5", "video-prompts", "remotion", "motion-graphics", "ai-video"],
+  "author": "yihui-dev",
+  "license": "MIT"
+}
